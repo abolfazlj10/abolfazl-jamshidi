@@ -1,0 +1,8 @@
+{
+  "name": "j10-projects",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Persian portfolio of Abolfazl Jamshidi's independent web projects",
+  "scripts": {"dev": "node scripts/serve.mjs", "check": "node --check dist/app.js && node scripts/check.mjs"}
+}

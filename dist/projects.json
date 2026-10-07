@@ -1,0 +1,138 @@
+[
+  {
+    "id": "toolbo",
+    "title": "تولبو",
+    "english": "ToolBo",
+    "category": "tools",
+    "categoryLabel": "پروژهٔ منتخب",
+    "icon": "grid",
+    "color": "#2858e8",
+    "tint": "#edf2ff",
+    "description": "یک جعبه‌ابزار فارسی برای کارهای روزمره؛ از محاسبات و تبدیل واحد تا ابزارهای زمان، متن و فناوری.",
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript"
+    ],
+    "repo": "https://github.com/abolfazlj10/toolbo",
+    "demo": "https://toolbo.vercel.app",
+    "status": "available",
+    "featured": true,
+    "image": "./assets/toolbo.png"
+  },
+  {
+    "id": "weather",
+    "title": "آب‌وهوا",
+    "english": "Weather App",
+    "category": "tools",
+    "categoryLabel": "ابزار کاربردی",
+    "icon": "cloud",
+    "color": "#2783b9",
+    "tint": "#e8f5fc",
+    "description": "جست‌وجوی شهرها و دیدن وضعیت آب‌وهوا در یک رابط با پس‌زمینهٔ متناسب با شرایط جوی.",
+    "tags": [
+      "Vue 3",
+      "Pinia",
+      "Vite"
+    ],
+    "repo": "https://github.com/abolfazlj10/WeatherApp",
+    "demo": "https://weatherapp-drab-eight.vercel.app",
+    "status": "available"
+  },
+  {
+    "id": "calculator",
+    "title": "ماشین‌حساب",
+    "english": "Calculator",
+    "category": "tools",
+    "categoryLabel": "ابزار کاربردی",
+    "icon": "calculator",
+    "color": "#6860c7",
+    "tint": "#f0edff",
+    "description": "محاسبات روزمره، تاریخچهٔ محاسبه‌ها و حالت روشن و تاریک؛ یکی از اولین تجربه‌های من با Vue.",
+    "tags": [
+      "Vue 3",
+      "Pinia",
+      "Vite"
+    ],
+    "repo": "https://github.com/abolfazlj10/calculator",
+    "demo": "https://calculator-five-lime-64.vercel.app",
+    "status": "available"
+  },
+  {
+    "id": "tictactoe",
+    "title": "تیک‌تاک‌تو",
+    "english": "Tic Tac Toe",
+    "category": "games",
+    "categoryLabel": "بازی",
+    "icon": "game",
+    "color": "#d17639",
+    "tint": "#fff1e6",
+    "description": "یک دست دوز بازی کنیم؟ بازی کلاسیک X و O با انتخاب حالت تک‌نفره یا دونفره.",
+    "tags": [
+      "Vue 3",
+      "Pinia",
+      "Vite"
+    ],
+    "repo": "https://github.com/abolfazlj10/TicTacToe",
+    "demo": "https://tictoctoe-sable.vercel.app",
+    "status": "available"
+  },
+  {
+    "id": "todo",
+    "title": "فهرست کارها",
+    "english": "Todo List",
+    "category": "productivity",
+    "categoryLabel": "برنامه‌ریزی",
+    "icon": "check",
+    "color": "#228674",
+    "tint": "#e6f6f0",
+    "description": "کارها را بنویس، انجام‌شده‌ها را مشخص کن و میان کارهای فعال و تمام‌شده جابه‌جا شو.",
+    "tags": [
+      "Vue 3",
+      "Pinia",
+      "Vite"
+    ],
+    "repo": "https://github.com/abolfazlj10/todo-List",
+    "demo": "https://todolist-pearl-eight.vercel.app",
+    "status": "available"
+  },
+  {
+    "id": "idiomyar",
+    "title": "اصطلاح‌یار",
+    "english": "IdiomYar",
+    "category": "learning",
+    "categoryLabel": "یادگیری",
+    "icon": "book",
+    "color": "#486aaf",
+    "tint": "#ebf0fa",
+    "description": "تمرین اصطلاحات انگلیسی با درس، فلش‌کارت و داستان‌های دوزبانه؛ قدمی فراتر از تمرین‌های اولیه.",
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript"
+    ],
+    "repo": "https://github.com/abolfazlj10/IdiomYar",
+    "demo": "https://www.idiomyar.ir/",
+    "status": "available",
+    "statusLabel": "لینک دمو نیاز به بررسی دارد"
+  },
+  {
+    "id": "cpass",
+    "title": "سازندهٔ رمز عبور",
+    "english": "CPass",
+    "category": "tools",
+    "categoryLabel": "ابزار کاربردی",
+    "icon": "key",
+    "color": "#99518a",
+    "tint": "#f9edf6",
+    "description": "تمرینی برای ساخت رمز تصادفی با انتخاب طول، حروف بزرگ و کوچک، اعداد و نمادها.",
+    "tags": [
+      "Vue 3",
+      "Vite"
+    ],
+    "repo": "https://github.com/abolfazlj10/CPass",
+    "demo": "https://create-pass.vercel.app",
+    "status": "unavailable",
+    "statusLabel": "دمو در دسترس نیست"
+  }
+]
