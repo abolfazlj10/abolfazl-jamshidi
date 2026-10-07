@@ -1,8 +1,16 @@
 {
   "name": "j10-projects",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "Persian portfolio of Abolfazl Jamshidi's independent web projects",
-  "scripts": {"dev": "node scripts/serve.mjs", "check": "node --check dist/app.js && node scripts/check.mjs"}
+  "description": "Minimal Next.js portfolio of Abolfazl Jamshidi\u2019s projects",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 4317",
+    "build": "next build"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  }
 }

@@ -4,3 +4,6 @@ node_modules/
 .env.*
 .sites-runtime/
 *.zip
+.next/
+out/
+next-env.d.ts
