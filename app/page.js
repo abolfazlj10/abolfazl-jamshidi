@@ -22,7 +22,7 @@ export default function Home() {
           <div className="intro-copy">
             <p className="eyebrow"><span className="small-line" /> WEB DEVELOPER</p>
             <h1 id="intro-title">Abolfazl<br />Jamshidi<span className="name-period">.</span></h1>
-            <p className="intro-description">Useful ideas. Thoughtfully built.<br /><span>I build websites and tools that make<br className="desktop-break" /> everyday things a little easier.</span></p>
+            <p className="intro-description">Websites with character. Built with care.<br /><span>I turn distinctive designs into websites<br className="desktop-break" /> that feel as good as they look.</span></p>
             <div className="intro-actions">
               <a className="primary-link" href="#projects">Explore my work <ArrowDown size={18} /></a>
               <a className="quiet-link" href="https://github.com/abolfazlj10" target="_blank" rel="noopener noreferrer" aria-label="Abolfazl on GitHub, opens in a new tab"><Code2 size={18} /> GitHub <ArrowUpRight size={14} /></a>

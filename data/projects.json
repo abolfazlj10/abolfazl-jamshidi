@@ -1,5 +1,81 @@
 [
   {
+    "id": "wepackaging",
+    "title": "WePackaging",
+    "category": "PACKAGING & BRANDING",
+    "description": "A studio website bringing packaging, brand identity, and digital design together. A place to explore the studio’s services and creative work.",
+    "tags": [
+      "Brand website",
+      "Packaging",
+      "Branding"
+    ],
+    "accent": "#dfcaad",
+    "image": null,
+    "repo": null,
+    "demo": "https://wepackaging.co/",
+    "status": "unavailable"
+  },
+  {
+    "id": "bazaarchiii",
+    "title": "Bazaarchiii",
+    "category": "A SPACE FOR CREATIVES",
+    "description": "A digital home for a creative marketplace. Discover the concept, explore event details, and meet the independent brands taking part.",
+    "tags": [
+      "Event website",
+      "Creative community"
+    ],
+    "accent": "#95bcd8",
+    "image": "/projects/bazaarchiii.jpg",
+    "repo": null,
+    "demo": "https://www.bazaarchiii.com/",
+    "status": "available"
+  },
+  {
+    "id": "worldbuilderzzz",
+    "title": "WorldBuilderzzz",
+    "category": "DIGITAL WORLDS",
+    "description": "A distinctive studio website for creating digital brand and event experiences. An introduction to the team, its services, and the worlds it has built.",
+    "tags": [
+      "Studio website",
+      "Brand experience"
+    ],
+    "accent": "#aeafff",
+    "image": "/projects/worldbuilderzzz.jpg",
+    "repo": null,
+    "demo": "https://www.worldbuilderzzz.ir/",
+    "status": "available"
+  },
+  {
+    "id": "mehdi-arman",
+    "title": "Mehdi Arman",
+    "category": "A PERSONAL WORLD",
+    "description": "A personal portfolio for a UI and creative designer. An expressive introduction, a collection of digital worlds, and a direct way to get in touch.",
+    "tags": [
+      "Portfolio",
+      "Personal website"
+    ],
+    "accent": "#c8c5ff",
+    "image": "/projects/mehdi-arman.jpg",
+    "repo": null,
+    "demo": "https://www.imehdiarman.ir/",
+    "status": "available"
+  },
+  {
+    "id": "fash-ba-tashdid",
+    "title": "Fash Ba Tashdid",
+    "category": "CREATIVE COLLECTIVE",
+    "description": "A bold website for a creative collective. Explore its branding and content services, browse the project archive, and discover the people behind the work.",
+    "tags": [
+      "Agency website",
+      "Project showcase"
+    ],
+    "accent": "#ef9b90",
+    "image": "/projects/fash-ba-tashdid.jpg",
+    "repo": null,
+    "demo": "https://www.fashbatashdid.com/",
+    "status": "available"
+  },
+  {
     "id": "toolbo",
     "title": "ToolBo",
     "category": "EVERYDAY TOOLS",
@@ -32,90 +108,5 @@
     "repo": "https://github.com/abolfazlj10/IdiomYar",
     "demo": "https://www.idiomyar.ir/",
     "status": "available"
-  },
-  {
-    "id": "weather",
-    "title": "Weather App",
-    "category": "A LOOK OUTSIDE",
-    "description": "A simple way to check the weather. Search for a city and get a clear picture of the conditions before heading out.",
-    "tags": [
-      "JavaScript",
-      "CSS",
-      "Weather"
-    ],
-    "accent": "#ffc96a",
-    "icon": "weather",
-    "image": "/projects/weather.png",
-    "repo": "https://github.com/abolfazlj10/WeatherApp",
-    "demo": "https://weatherapp-drab-eight.vercel.app",
-    "status": "available"
-  },
-  {
-    "id": "todo",
-    "title": "Todo List",
-    "category": "A LITTLE MORE ORDER",
-    "description": "A dedicated place for the things you need to do. Capture a task, work through your list, and make space for what comes next.",
-    "tags": [
-      "JavaScript",
-      "CSS",
-      "Productivity"
-    ],
-    "accent": "#d0a9f3",
-    "icon": "tasks",
-    "image": "/projects/todo.png",
-    "repo": "https://github.com/abolfazlj10/todo-List",
-    "demo": "https://todolist-pearl-eight.vercel.app",
-    "status": "available"
-  },
-  {
-    "id": "calculator",
-    "title": "Calculator",
-    "category": "NUMBERS, SIMPLIFIED",
-    "description": "Everyday arithmetic with a straightforward interface. A small project built around one thing: making the next calculation easy.",
-    "tags": [
-      "JavaScript",
-      "CSS",
-      "Utility"
-    ],
-    "accent": "#ff9987",
-    "icon": "calculator",
-    "image": "/projects/calculator.png",
-    "repo": "https://github.com/abolfazlj10/calculator",
-    "demo": "https://calculator-five-lime-64.vercel.app",
-    "status": "available"
-  },
-  {
-    "id": "tictactoe",
-    "title": "Tic Tac Toe",
-    "category": "ONE MORE ROUND",
-    "description": "Two players, nine squares, and a familiar little challenge. A browser game that brings the classic back to basics.",
-    "tags": [
-      "JavaScript",
-      "CSS",
-      "Game"
-    ],
-    "accent": "#83d8f5",
-    "icon": "game",
-    "image": "/projects/tictactoe.png",
-    "repo": "https://github.com/abolfazlj10/TicTacToe",
-    "demo": "https://tictoctoe-sable.vercel.app",
-    "status": "available"
-  },
-  {
-    "id": "cpass",
-    "title": "CPass",
-    "category": "LESS PREDICTABLE",
-    "description": "A small password generator for creating randomized passwords. The source is available to explore; the live demo is currently offline.",
-    "tags": [
-      "JavaScript",
-      "CSS",
-      "Utility"
-    ],
-    "accent": "#eceba0",
-    "icon": "password",
-    "image": null,
-    "repo": "https://github.com/abolfazlj10/CPass",
-    "demo": "https://create-pass.vercel.app",
-    "status": "unavailable"
   }
 ]

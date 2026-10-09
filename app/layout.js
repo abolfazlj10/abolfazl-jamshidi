@@ -11,7 +11,7 @@ const vazirmatn = localFont({
 
 export const metadata = {
   title: 'Abolfazl Jamshidi | Web Developer',
-  description: 'Thoughtful websites, useful tools, and experiments. Explore the selected projects of Abolfazl Jamshidi.',
+  description: 'Brand websites, creative portfolios, and useful tools. Explore the selected web development projects of Abolfazl Jamshidi.',
   icons: { icon: '/favicon.svg' },
 };
 

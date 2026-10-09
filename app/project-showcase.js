@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Code2, KeyRound } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Code2, Globe2 } from 'lucide-react';
 import { projectAtScroll, projectScrollOffset } from './project-scroll.mjs';
 
 const pinnedQuery = '(min-width: 1000px) and (min-height: 720px)';
@@ -81,7 +81,7 @@ export default function ProjectShowcase({ projects }) {
       <div className="projects-panel" ref={panel} onKeyDown={keyDown}>
         <div className="scroll-progress" aria-hidden="true"><span ref={progress} /></div>
         <header className="projects-header">
-          <div><p className="eyebrow">01 / SELECTED WORK</p><h2 id="projects-title">Small ideas. Real projects<span>.</span></h2></div>
+          <div><p className="eyebrow">01 / SELECTED WORK</p><h2 id="projects-title">Selected projects<span>.</span></h2></div>
           <a href="#contact" className="quiet-link">Let&apos;s talk <ArrowUpRight size={16} /></a>
         </header>
 
@@ -95,20 +95,21 @@ export default function ProjectShowcase({ projects }) {
         <article id="project-detail" className="project-content" aria-labelledby={`title-${active.id}`}>
           <div className="project-copy" key={`copy-${active.id}`}>
             <p className="project-overline"><span className="small-line" />{active.category}</p>
-            <h3 id={`title-${active.id}`}>{active.title}<span>.</span></h3>
+            <h3 id={`title-${active.id}`} className={active.title.length > 12 ? 'long-title' : undefined}>{active.title}<span>.</span></h3>
             <p className="project-description">{active.description}</p>
-            <ul className="project-tags" aria-label="Project technologies">{active.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+            <ul className="project-tags" aria-label="Project details">{active.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
             <div className="project-links">
-              {active.status === 'available' ? <a className="primary-link" href={active.demo} target="_blank" rel="noopener noreferrer">View live project <ArrowUpRight size={18} /></a> : <span className="offline-label">Demo currently offline</span>}
-              <a className="source-link" href={active.repo} target="_blank" rel="noopener noreferrer"><Code2 size={16} /> Source code <ArrowUpRight size={14} /></a>
+              <a className="primary-link" href={active.demo} target="_blank" rel="noopener noreferrer">Visit website <ArrowUpRight size={18} /></a>
+              {active.repo && <a className="source-link" href={active.repo} target="_blank" rel="noopener noreferrer"><Code2 size={16} /> Source code <ArrowUpRight size={14} /></a>}
             </div>
+            {active.status === 'unavailable' && <p className="availability-note">Website temporarily unavailable.</p>}
           </div>
           <div className="project-visual" key={`visual-${active.id}`} onTouchStart={(event) => { touch.current = { x: event.touches[0].clientX, y: event.touches[0].clientY }; }} onTouchEnd={touchEnd} onTouchCancel={() => { touch.current = null; }}>
             {active.image ? <div className="preview-window">
               <div className="preview-bar"><div className="window-dots"><i /><i /><i /></div><span>{new URL(active.demo).hostname}</span><ArrowUpRight size={13} /></div>
               <img src={active.image} alt={`${active.title} interface preview`} width={1280} height={800} loading="eager" draggable="false" />
-            </div> : <div className="source-preview"><KeyRound size={56} strokeWidth={1} /><span>CPass</span><p>A small tool for stronger passwords.</p><span className="source-preview-label">SOURCE AVAILABLE ON GITHUB</span></div>}
-            <span className="preview-caption">{active.image ? 'A look inside the project' : 'Explore the code behind the project'}<span>{number(activeIndex + 1)} / {number(count)}</span></span>
+            </div> : <div className="source-preview"><Globe2 size={48} strokeWidth={1} /><span>{active.title}</span><p>{new URL(active.demo).hostname}</p><span className="source-preview-label">PREVIEW UNAVAILABLE</span></div>}
+            <span className="preview-caption">{active.image ? 'A look inside the project' : 'Website preview currently unavailable'}<span>{number(activeIndex + 1)} / {number(count)}</span></span>
           </div>
         </article>
 
@@ -127,7 +128,7 @@ export default function ProjectShowcase({ projects }) {
         </div>
       </div>
       <p className="sr-only" role="status" aria-atomic="true">Project {activeIndex + 1} of {count}: {active.title}</p>
-      <noscript><div className="project-fallback">{projects.map((project) => <a key={project.id} href={project.status === 'available' ? project.demo : project.repo}>{project.title} ↗</a>)}</div></noscript>
+      <noscript><div className="project-fallback">{projects.map((project) => <a key={project.id} href={project.demo}>{project.title} ↗</a>)}</div></noscript>
     </section>
   );
 }

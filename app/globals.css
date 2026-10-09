@@ -70,7 +70,7 @@ svg { flex-shrink: 0; }
 .source-preview > span { font-family: Arial, sans-serif; font-size: 44px; }
 .source-preview > p { color: #bac0ad; font-size: 12px; }
 .source-preview .source-preview-label { font-family: inherit; margin-top: 15px; font-size: 9px; letter-spacing: 2px; }
-.project-index { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 16px; }
+.project-index { display: grid; grid-template-columns: repeat(var(--project-count), minmax(0, 1fr)); gap: 16px; }
 .project-index button { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 15px 0; border: 0; border-top: 1px solid #ffffff26; background: transparent; color: var(--muted); text-align: left; font-size: 12px; }
 .project-index button > span { font-size: 9px; font-variant-numeric: tabular-nums; opacity: .7; }
 .project-index button:hover { color: #fff; border-color: #ffffff88; }
@@ -205,3 +205,7 @@ svg { flex-shrink: 0; }
   .projects-bottom .scroll-hint, .projects-bottom .current-count { display: none; }
   .project-content { grid-column: 1 / -1; grid-row: 3; margin: 4px 0 0; }
 }
+
+.project-copy h3.long-title { font-size: clamp(28px, 3vw, 44px); letter-spacing: -1.3px; overflow-wrap: anywhere; }
+.availability-note { margin-top: 12px; color: var(--muted); font-size: 10px; }
+.source-preview > span { max-width: 90%; overflow-wrap: anywhere; font-size: clamp(26px, 3vw, 42px); }
