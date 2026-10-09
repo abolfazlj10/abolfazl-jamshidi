@@ -10,14 +10,14 @@ const vazirmatn = localFont({
 });
 
 export const metadata = {
-  title: 'پروژه‌ها · ابوالفضل جمشیدی',
-  description: 'پروژه‌های ابوالفضل جمشیدی، همراه با لینک اجرا و کد منبع.',
+  title: 'Abolfazl Jamshidi | Web Developer',
+  description: 'Thoughtful websites, useful tools, and experiments. Explore the selected projects of Abolfazl Jamshidi.',
   icons: { icon: '/favicon.svg' },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="en" dir="ltr">
       <body className={vazirmatn.className}>{children}</body>
     </html>
   );
