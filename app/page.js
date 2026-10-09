@@ -1,44 +1,45 @@
 import { ArrowDown, ArrowUpRight, Code2 } from 'lucide-react';
 import projects from '../data/projects.json';
-import ProjectWheel from './project-wheel';
+import ProjectShowcase from './project-showcase';
 
 export default function Home() {
   return (
     <main>
+      <a className="skip-link" href="#projects">Skip to projects</a>
       <nav className="site-nav" aria-label="Main navigation">
         <a className="wordmark" href="#intro" aria-label="Abolfazl Jamshidi, introduction">aj<span>.</span></a>
         <div className="nav-links">
           <a href="#intro">Intro</a>
           <a href="#projects">Projects<span className="nav-count">{String(projects.length).padStart(2, '0')}</span></a>
-          <a href="mailto:abolfazl.j.dev@gmail.com">Let&apos;s talk <ArrowUpRight size={14} /></a>
+          <a href="#contact">Let&apos;s talk <ArrowUpRight size={14} /></a>
         </div>
       </nav>
       <section id="intro" className="intro" aria-labelledby="intro-title">
         <div className="portrait-scene">
-          <img className="portrait" src="/images/abolfazl-cutout.webp" alt="Portrait of Abolfazl Jamshidi" fetchPriority="high" />
+          <img className="portrait" src="/images/abolfazl-cutout.webp" alt="Portrait of Abolfazl Jamshidi" fetchPriority="high" width={1024} height={1536} />
         </div>
         <div className="intro-inner">
           <div className="intro-copy">
             <p className="eyebrow"><span className="small-line" /> WEB DEVELOPER</p>
-            <h1 id="intro-title">Abolfazl<br /><span>Jamshidi</span><span className="name-period">.</span></h1>
-            <p className="intro-description">I turn ideas into things you can use.<br />Thoughtful websites, useful tools, and a little<br className="desktop-break" /> room for experimentation.</p>
+            <h1 id="intro-title">Abolfazl<br />Jamshidi<span className="name-period">.</span></h1>
+            <p className="intro-description">Useful ideas. Thoughtfully built.<br /><span>I build websites and tools that make<br className="desktop-break" /> everyday things a little easier.</span></p>
             <div className="intro-actions">
               <a className="primary-link" href="#projects">Explore my work <ArrowDown size={18} /></a>
-              <a className="icon-link" href="https://github.com/abolfazlj10" target="_blank" rel="noopener noreferrer" aria-label="Abolfazl on GitHub, opens in a new tab" title="GitHub"><Code2 size={21} /></a>
+              <a className="quiet-link" href="https://github.com/abolfazlj10" target="_blank" rel="noopener noreferrer" aria-label="Abolfazl on GitHub, opens in a new tab"><Code2 size={18} /> GitHub <ArrowUpRight size={14} /></a>
             </div>
           </div>
           <div className="intro-bottom">
-            <span className="tiny-label">IDEAS. CODE. SOMETHING REAL.</span>
-            <a href="#projects" className="section-link"><span>01 / 02</span><ArrowDown size={16} /><span>SELECTED WORK</span></a>
+            <span className="tiny-label">REACT / NEXT.JS / JAVASCRIPT</span>
+            <a href="#projects" className="section-link"><span>SELECTED WORK</span><ArrowDown size={16} /></a>
           </div>
         </div>
       </section>
-      <ProjectWheel projects={projects} />
-      <footer className="site-footer">
-        <a href="#intro">Abolfazl Jamshidi <ArrowUpRight size={14} /></a>
-        <a href="mailto:abolfazl.j.dev@gmail.com">Have something in mind? Let&apos;s talk <ArrowUpRight size={14} /></a>
-        <span>Built with curiosity.</span>
-      </footer>
+      <ProjectShowcase projects={projects} />
+      <section id="contact" className="contact-section" aria-labelledby="contact-title">
+        <div><p className="eyebrow">02 / GET IN TOUCH</p><h2 id="contact-title">Have something<br />in mind<span>?</span></h2><p>For a project, an opportunity, or a conversation.</p></div>
+        <div className="contact-links"><a className="contact-email" href="mailto:abolfazl.j.dev@gmail.com">Let&apos;s talk <ArrowUpRight size={32} /></a><a className="quiet-link" href="mailto:abolfazl.j.dev@gmail.com">abolfazl.j.dev@gmail.com</a><a className="quiet-link" href="https://github.com/abolfazlj10" target="_blank" rel="noopener noreferrer">Find me on GitHub <ArrowUpRight size={14} /></a></div>
+      </section>
+      <footer className="site-footer"><span>© {new Date().getFullYear()} Abolfazl Jamshidi</span><span>Made with care, down to the details.</span><a href="#intro">Back to top <ArrowUpRight size={14} /></a></footer>
     </main>
   );
 }

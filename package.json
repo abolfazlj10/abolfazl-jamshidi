@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "Abolfazl Jamshidi's portfolio with a rotating project showcase",
+  "description": "Abolfazl Jamshidi's portfolio with a native-scroll project showcase",
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1 --port 4317",
     "build": "next build",
