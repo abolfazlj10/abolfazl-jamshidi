@@ -1,3 +1,4 @@
+import { NavigationProvider } from './navigation';
 import localFont from 'next/font/local';
 import './globals.css';
 import { Entrance, Header, PageMotion } from './interactions';
@@ -24,8 +25,10 @@ export default function RootLayout({ children }) {
       <body className={vazirmatn.variable}>
         <Entrance />
         <a className="skip-link" href="#main-content">Skip to content</a>
-        <Header projectCount={projects.length} archiveCount={projects.length} />
-        <PageMotion>{children}</PageMotion>
+        <NavigationProvider>
+          <Header projectCount={projects.length} archiveCount={projects.length} />
+          <PageMotion>{children}</PageMotion>
+        </NavigationProvider>
       </body>
     </html>
   );

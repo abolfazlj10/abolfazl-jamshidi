@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from './navigation';
 import profile from '../data/profile.json';
 
 export function ArrowLink({ href, children, className = '', external = false }) {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import Link from './navigation';
 import { usePathname } from 'next/navigation';
 import profile from '../data/profile.json';
 
@@ -124,11 +124,11 @@ export function PageMotion({ children }) {
 export function HeroName({ projects }) {
   const [paused, setPaused] = useState(false);
   return <div className={`hero-name${paused ? ' hero-paused' : ''}`}>
-    <span className="hero-word hero-word-first" aria-hidden="true">Abol</span>
+    <span className="hero-word hero-word-first" aria-hidden="true">{[..."Abol"].map((letter, index) => <span className="hero-letter" style={{ "--letter": index }} key={index}>{letter}</span>)}</span>
     <button className="hero-reel" onClick={() => setPaused((value) => !value)} aria-label={paused ? 'Play project slideshow' : 'Pause project slideshow'} aria-pressed={paused}>
       {projects.map((project, index) => <img key={project.id} src={project.image} alt="" width="360" height="260" style={{ '--frame': index }} fetchPriority={index === 0 ? 'high' : 'auto'} />)}
     </button>
-    <span className="hero-word hero-word-last" aria-hidden="true">fazl</span>
+    <span className="hero-word hero-word-last" aria-hidden="true">{[..."fazl"].map((letter, index) => <span className="hero-letter" style={{ "--letter": index + 4 }} key={index}>{letter}</span>)}</span>
     <span className="sr-only">Abolfazl Jamshidi</span>
   </div>;
 }

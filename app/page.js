@@ -15,7 +15,7 @@ export default function Home() {
     <div className="page-gutter"><InfoRow label="Approach" text={profile.approach} action={<ArrowLink href="/about/">More about me</ArrowLink>} /></div>
     <section id="projects" className="selected-work" aria-labelledby="selected-title">
       <div className="section-heading" data-reveal><h2 id="selected-title">Selected works</h2><ArrowLink className="desktop-only" href="/work/">See all works</ArrowLink></div>
-      <ProjectGrid projects={projects.slice(0, 2)} />
+      <ProjectGrid projects={projects.filter((project) => project.image).slice(0, 2)} />
       <ArrowLink className="mobile-all-work" href="/work/">See all works</ArrowLink>
     </section>
     <Footer />
