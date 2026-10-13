@@ -1,5 +1,7 @@
 import localFont from 'next/font/local';
 import './globals.css';
+import { Entrance, Header, PageMotion } from './interactions';
+import projects from '../data/projects.json';
 
 const vazirmatn = localFont({
   src: [
@@ -7,6 +9,7 @@ const vazirmatn = localFont({
     { path: './fonts/Vazirmatn-Bold.ttf', weight: '700', style: 'normal' },
   ],
   display: 'swap',
+  variable: '--font-persian',
 });
 
 export const metadata = {
@@ -17,8 +20,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="ltr">
-      <body className={vazirmatn.className}>{children}</body>
+    <html lang="en" dir="ltr" data-scroll-behavior="smooth">
+      <body className={vazirmatn.variable}>
+        <Entrance />
+        <a className="skip-link" href="#main-content">Skip to content</a>
+        <Header projectCount={projects.length} archiveCount={projects.length} />
+        <PageMotion>{children}</PageMotion>
+      </body>
     </html>
   );
 }
