@@ -2,15 +2,46 @@
   "name": "Abolfazl Jamshidi",
   "email": "abolfazl.j.dev@gmail.com",
   "github": "https://github.com/abolfazlj10",
-  "location": null,
-  "country": null,
+  "linkedin": "https://www.linkedin.com/in/abolfazljamshidi",
+  "location": "Tehran",
+  "country": "Iran",
   "whatsapp": null,
   "workingSince": null,
-  "headline": ["Front-end developer — creating", "websites with character and care"],
-  "approach": "I turn distinctive designs into thoughtful websites that feel as good as they look.",
+  "headline": ["Front-end developer.", "Product interfaces. Creative websites."],
+  "featuredProjects": ["wepackaging", "fash-ba-tashdid", "toolbo", "idiomyar"],
+  "availability": "Open to full-time front-end roles · On-site or remote",
+  "approach": "I build product interfaces and creative websites with React, Next.js, and TypeScript. My work spans customer workflows, admin panels, and interactive 3D experiences, with a focus on usability and responsive layouts.",
   "intro": [
-    "I’m a front-end developer. I bring distinctive designs to life, combining creative thinking with attention to detail to build websites that feel as good as they look.",
-    "I care about the small details — fluid interactions, thoughtful motion, and the things that make a digital experience feel simple, enjoyable, and easy to use."
+    "I’m Abolfazl, a front-end developer based in Tehran, working with React, Next.js, and TypeScript. I build product interfaces, admin panels, and brand websites, with a particular interest in motion and interactive 3D experiences.",
+    "At Avan Tech, I develop customer and admin workflows. As co-founder and technical lead at Worldbuilderzzz, I lead end-to-end development of the team’s products and websites. I handled all programming for WePackaging and Fash Ba Tashdid, from the first interaction to individual project pages."
   ],
-  "contact": "Have a project in mind, an opportunity to share, or an idea to explore? I’m always happy to start a conversation. Feel free to"
+  "experience": [
+    {
+      "company": "Avan Tech",
+      "role": "Front-end Developer",
+      "period": "2025 – Present",
+      "employment": "Full-time",
+      "highlights": [
+        "Expanded Madar Market’s customer account with wallet withdrawal requests, product returns and tracking, transaction history, notifications, and order cancellation. Improved admin tools for homepage sections and promotions.",
+        "Built Talaresoon’s admin interfaces for orders, product variants, customers, categories, and dashboards, plus product listing and category routes for the mobile client.",
+        "Implemented user interfaces for Bamadarfood."
+      ]
+    },
+    {
+      "company": "Worldbuilderzzz",
+      "url": "https://www.worldbuilderzzz.ir/",
+      "role": "Co-founder & Technical Lead",
+      "period": "2025 – Present",
+      "highlights": [
+        "Lead end-to-end technical implementation of the team’s products, brand websites, and landing pages, across front-end and back-end development."
+      ]
+    }
+  ],
+  "skills": [
+    { "label": "Front-end", "items": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"] },
+    { "label": "Graphics & interaction", "items": ["Three.js", "WebGL", "Framer Motion"] },
+    { "label": "Back-end", "items": ["Bun", "Elysia", "Prisma", "PostgreSQL"] },
+    { "label": "Development", "items": ["Git", "Monorepo workflows", "UI implementation", "Usability improvements"] }
+  ],
+  "contact": "I’m open to full-time front-end roles, on-site or remote. If your team is hiring, I’d like to hear what you’re building."
 }

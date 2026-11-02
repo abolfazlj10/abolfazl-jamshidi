@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { ArrowLink, ProjectVisual } from '../../portfolio';
+import { ArrowLink, Footer, ProjectVisual } from '../../portfolio';
 import projects from '../../../data/projects.json';
 
 export const dynamicParams = false;
@@ -15,12 +15,15 @@ export default async function Project({ params }) {
   if (index === -1) notFound();
   const project = projects[index];
   const nextProject = projects[(index + 1) % projects.length];
-  return <main id="main-content" className="project-page">
+  return <main id="main-content"><div className="project-page">
     <div className="project-info">
       <span className="project-number">{String(index + 1).padStart(2, '0')}</span>
       <div><h1 className="project-title">{project.title}</h1><div className="project-description">
-        <p className="project-date">[ {project.year || String(index + 1).padStart(2, '0')} ]</p>
-        <div className="project-details"><ul>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul><p>{project.description}</p>
+        <p className="project-date">{project.year ? `[ ${project.year} ]` : project.category}</p>
+        <div className="project-details">
+          {project.role && <div className="project-fact"><h2>My role</h2><p>{project.role}</p></div>}
+          <div className="project-fact"><h2>{project.technologies ? 'Built with' : 'Project type'}</h2><ul>{(project.technologies || project.tags).map((tag) => <li key={tag}>{tag}</li>)}</ul></div>
+          <p>{project.description}</p>
           <div className="project-external-links"><ArrowLink href={project.demo} external>Visit website</ArrowLink>{project.repo && <ArrowLink href={project.repo} external>Source code</ArrowLink>}</div>
           {project.status === 'unavailable' && <p className="project-availability">Website was unavailable at the last check.</p>}
         </div>
@@ -29,9 +32,21 @@ export default async function Project({ params }) {
     </div>
     <div className="project-gallery">
       <ProjectVisual project={project} className="project-cover" priority />
-      {project.image && <div className="project-browser-scene" style={{ '--project-color': project.accent }} data-reveal><div className="browser-mockup"><div className="browser-toolbar" aria-hidden="true"><span>● ● ●</span><span>{new URL(project.demo).hostname}</span><span>↗</span></div><img src={project.image} alt={`${project.title}, full website view`} width="1440" height="900" loading="lazy" /></div></div>}
-      {project.image && <div className="project-device-scene" style={{ '--project-color': project.accent }} data-reveal><div className="detail-crop"><img src={project.image} alt={`${project.title}, design detail`} width="1440" height="900" loading="lazy" /></div><p>[ A closer look ]</p></div>}
+      {project.caseStudy && <section className="project-story" aria-labelledby="story-title">
+        <p className="story-label">Development notes</p>
+        <h2 id="story-title">{project.caseStudy.title}</h2>
+        <p className="story-intro">{project.caseStudy.intro}</p>
+        {project.caseStudy.sections.map((section) => <div className="story-section" key={section.title}>
+          <h3>{section.title}</h3><p>{section.text}</p>
+        </div>)}
+        <div className="story-explore"><h3>See it in action</h3><p>{project.caseStudy.explore}</p><ArrowLink href={project.demo} external>Explore the live website</ArrowLink></div>
+      </section>}
+      {project.gallery?.map((item) => <figure className="project-screenshot" key={item.src} data-reveal>
+        <img src={item.src} alt={item.alt} width={item.width} height={item.height} loading="lazy" />
+        <figcaption>{item.caption}</figcaption>
+      </figure>)}
       <ArrowLink className="next-project-mobile" href={`/project/${nextProject.id}/`}>Next project</ArrowLink>
     </div>
+    </div><Footer />
   </main>;
 }

@@ -2,22 +2,55 @@
   {
     "id": "wepackaging",
     "title": "WePackaging",
+    "summary": "Sole developer · An interactive 3D portfolio with custom scroll physics.",
     "category": "PACKAGING & BRANDING",
-    "description": "A studio website bringing packaging, brand identity, and digital design together. A place to explore the studio’s services and creative work.",
+    "description": "A website for a branding and packaging studio, with an interactive 3D gallery at its centre. I handled all programming, including the motion and scrolling that shape how visitors explore the work.",
+    "role": "Sole developer — all website programming",
+    "technologies": ["Next.js", "React", "TypeScript", "Three.js", "Lenis"],
+    "caseStudy": {
+      "title": "Making scrolling feel natural",
+      "intro": "The most demanding part of this project was getting the physics and scrolling to feel right. Motion is central to the way visitors move through the studio’s work.",
+      "sections": [
+        {
+          "title": "The interaction",
+          "text": "I built a Three.js scene with project cards arranged in a rotating gallery. Scrolling and dragging move through the work, while selecting a card opens its project page."
+        },
+        {
+          "title": "The implementation",
+          "text": "The motion uses time-based damping, decaying rotational velocity, and card bending linked to scroll speed. Wheel input and pointer dragging feed the same scene, with limits on input strength and rotation speed."
+        },
+        {
+          "title": "Beyond the animation",
+          "text": "The implementation includes reduced-motion behaviour and a project-list fallback when the 3D scene cannot load. The work stays reachable even when the animated experience is unavailable."
+        }
+      ],
+      "explore": "On the live site, move past the opening title, scroll or drag through the gallery, and select a project."
+    },
     "tags": [
       "Brand website",
       "Packaging",
       "Branding"
     ],
     "accent": "#dfcaad",
-    "image": null,
+    "image": "/projects/wepackaging.png",
+    "imageAspectRatio": "1280 / 800",
+    "gallery": [
+      {
+        "src": "/projects/wepackaging-intro.png",
+        "alt": "WePackaging opening screen with a curved grid and large wordmark",
+        "width": 1280,
+        "height": 800,
+        "caption": "The opening screen leads into the interactive project gallery."
+      }
+    ],
     "repo": null,
     "demo": "https://wepackaging.co/",
-    "status": "unavailable"
+    "status": "available"
   },
   {
     "id": "bazaarchiii",
     "title": "Bazaarchiii",
+    "summary": "An event website connecting a creative market with its visitors.",
     "category": "A SPACE FOR CREATIVES",
     "description": "A digital home for a creative marketplace. Discover the concept, explore event details, and meet the independent brands taking part.",
     "tags": [
@@ -33,8 +66,10 @@
   {
     "id": "worldbuilderzzz",
     "title": "WorldBuilderzzz",
+    "summary": "The studio I co-founded, leading technical implementation of products and brand websites.",
     "category": "DIGITAL WORLDS",
-    "description": "A distinctive studio website for creating digital brand and event experiences. An introduction to the team, its services, and the worlds it has built.",
+    "description": "The studio I co-founded and where I lead end-to-end technical implementation of our products, brand websites, and landing pages. The website introduces our team, services, and selected digital experiences.",
+    "role": "Co-founder & Technical Lead",
     "tags": [
       "Studio website",
       "Brand experience"
@@ -48,8 +83,10 @@
   {
     "id": "mehdi-arman",
     "title": "Mehdi Arman",
+    "summary": "A desktop-style portfolio with projects presented in macOS-style windows.",
     "category": "A PERSONAL WORLD",
-    "description": "A personal portfolio for a UI and creative designer. An expressive introduction, a collection of digital worlds, and a direct way to get in touch.",
+    "description": "A desktop-style portfolio for a UI and creative designer. I built a landing page that presents projects in macOS-style windows, turning a familiar desktop metaphor into a personal showcase.",
+    "role": "Developer",
     "tags": [
       "Portfolio",
       "Personal website"
@@ -63,14 +100,46 @@
   {
     "id": "fash-ba-tashdid",
     "title": "Fash Ba Tashdid",
+    "summary": "Sole developer · A creative collective’s website, project archive, and image galleries.",
     "category": "CREATIVE COLLECTIVE",
-    "description": "A bold website for a creative collective. Explore its branding and content services, browse the project archive, and discover the people behind the work.",
+    "description": "A website for a creative collective, bringing its services, people, and project archive together. I handled all programming, including the homepage, service pages, project pages, and image galleries.",
+    "role": "Sole developer — all website programming",
+    "technologies": ["Next.js", "React", "TypeScript", "Framer Motion", "Tailwind CSS"],
+    "caseStudy": {
+      "title": "A complete website for a creative collective",
+      "intro": "I was responsible for turning the visual direction into a working website. The scope covered the whole experience, from the first screen to individual service and project pages.",
+      "sections": [
+        {
+          "title": "The homepage",
+          "text": "I built reusable full-screen sections for the introduction, services, projects, and contact details, with section navigation and scroll-triggered entrance animations."
+        },
+        {
+          "title": "The project archive",
+          "text": "A shared project dataset powers the archive and individual project pages. Each page combines the project description with an image gallery, including an enlarged image view with previous and next navigation."
+        },
+        {
+          "title": "Responsive layouts and motion",
+          "text": "The implementation adapts the project grid and page layouts for smaller screens. Shared animation patterns in Framer Motion connect the sections while keeping the collective’s visual identity consistent."
+        }
+      ],
+      "explore": "Open the Projects section on the live site, choose a project, and explore its image gallery."
+    },
     "tags": [
       "Agency website",
       "Project showcase"
     ],
     "accent": "#ef9b90",
-    "image": "/projects/fash-ba-tashdid.jpg",
+    "image": "/projects/fash-ba-tashdid-mockup.png",
+    "imageAspectRatio": "1672 / 941",
+    "gallery": [
+      {
+        "src": "/projects/fash-ba-tashdid.jpg",
+        "alt": "Fash Ba Tashdid homepage screenshot",
+        "width": 1280,
+        "height": 800,
+        "caption": "A closer look at the homepage."
+      }
+    ],
     "repo": null,
     "demo": "https://www.fashbatashdid.com/",
     "status": "available"
@@ -78,8 +147,11 @@
   {
     "id": "toolbo",
     "title": "ToolBo",
+    "summary": "Calculators, converters, and everyday utilities. Built with Next.js and React.",
     "category": "EVERYDAY TOOLS",
-    "description": "A little toolbox for the everyday. Calculations, conversions, and handy utilities, together in one thoughtfully organized place.",
+    "description": "I built ToolBo to bring everyday utility tools together in one place, from calculators to converters. Built with Next.js and React, the app organizes practical tools in one accessible interface.",
+    "role": "Developer",
+    "technologies": ["Next.js", "React", "Tailwind CSS"],
     "tags": [
       "Next.js",
       "React",
@@ -87,7 +159,17 @@
     ],
     "accent": "#c2f970",
     "icon": "toolbox",
-    "image": "/projects/toolbo.png",
+    "image": "/projects/toolbo-mockup.png",
+    "imageAspectRatio": "1536 / 1024",
+    "gallery": [
+      {
+        "src": "/projects/toolbo.png",
+        "alt": "ToolBo application screenshot",
+        "width": 1280,
+        "height": 800,
+        "caption": "The app interface, beyond the cover preview."
+      }
+    ],
     "repo": "https://github.com/abolfazlj10/toolbo",
     "demo": "https://toolbo.vercel.app",
     "status": "available"
@@ -95,8 +177,29 @@
   {
     "id": "idiomyar",
     "title": "IdiomYar",
+    "summary": "An idiom-learning app with audio, flashcards, saved idioms, and AI-generated practice stories.",
     "category": "LANGUAGE IN CONTEXT",
-    "description": "English idioms that stay with you. Explore lessons, practice with flashcards, and put new expressions into context with bilingual stories.",
+    "description": "I built a study companion for Essential Idioms in English. Learners can listen to pronunciation audio, explore usage examples, switch between English and Persian, practice with AI-generated stories and flashcards, and save idioms for review.",
+    "role": "Developer",
+    "caseStudy": {
+      "title": "Learning idioms in context",
+      "intro": "IdiomYar brings explanations, listening, contextual practice, and review into one study companion for Essential Idioms in English.",
+      "sections": [
+        {
+          "title": "Understand and listen",
+          "text": "Pronunciation audio and usage examples help learners connect each idiom with how it sounds and how it is used. English and Persian text toggles let them switch languages while studying."
+        },
+        {
+          "title": "Practice in context",
+          "text": "AI-generated stories give learners another way to practice expressions in context, alongside the idiom explanations and examples."
+        },
+        {
+          "title": "Return and review",
+          "text": "Flashcards support focused practice, while saved idioms let learners keep a personal collection to revisit."
+        }
+      ],
+      "explore": "Choose a lesson, listen to an idiom’s pronunciation, switch between English and Persian, and explore the flashcard and saved-idiom features."
+    },
     "tags": [
       "Next.js",
       "TypeScript",

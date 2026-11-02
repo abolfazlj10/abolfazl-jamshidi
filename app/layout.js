@@ -14,8 +14,8 @@ const vazirmatn = localFont({
 });
 
 export const metadata = {
-  title: 'Abolfazl Jamshidi | Web Developer',
-  description: 'Brand websites, creative portfolios, and useful tools. Explore the selected web development projects of Abolfazl Jamshidi.',
+  title: 'Abolfazl Jamshidi | Front-end Developer',
+  description: 'Front-end developer in Tehran building product interfaces and interactive brand websites with React, Next.js, and TypeScript. Explore selected projects and professional experience.',
   icons: { icon: '/favicon.svg' },
 };
 

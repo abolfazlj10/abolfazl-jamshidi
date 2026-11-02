@@ -4,7 +4,7 @@
 
 ## صفحات
 
-- **صفحهٔ اصلی ← «Selected works»**: نام بزرگ با نمایش متناوب چهار تصویر، معرفی سه‌خطی، **«Approach»** و دو پروژهٔ منتخبِ دارای تصویر.
+- **صفحهٔ اصلی ← «Selected works»**: نام بزرگ با نمایش متناوب چهار تصویر، معرفی سه‌خطی، **«Approach»** و چهار پروژهٔ منتخبِ دارای تصویر.
 - **منوی بالا ← «Work»**: هفت پروژه در دو ستون دسکتاپ و یک ستون موبایل.
 - **«Work» ← کارت پروژه**: توضیحات ثابت در سمت چپ و گالری در سمت راست؛ **«Visit website»**، **«Source code»** در صورت وجود، و **«Next project»**.
 - **منوی بالا ← «Archive»**: فهرست سه‌ستونی با پیش‌نمایش هنگام اشاره یا تمرکز صفحه‌کلید؛ شبکهٔ تصویری در موبایل.
@@ -41,9 +41,8 @@ npm run build
 - `app/portfolio.js`: اجزای مشترک، کارت‌ها و تماس.
 - `app/globals.css`: چیدمان، تایپوگرافی، اندازه‌های موبایل و حرکت‌ها.
 
-محل فعالیت، شمارهٔ واتساپ، سال شروع و تاریخ پروژه‌ها هنوز دادهٔ تأییدشده ندارند. فعلاً به‌جای محل، فناوری‌ها نمایش داده می‌شوند؛ تاریخ نامشخص آرشیو «—» است. **«Archive»** موقتاً همان پروژه‌های موجود را نمایش می‌دهد و برای مجموعهٔ مستقل لوگو یا هویت بصری به تصاویر و مشخصات آن نیاز دارد.
+محل فعالیت طبق رزومه تهران، ایران است. شمارهٔ واتساپ، سال شروع کلی فعالیت و تاریخ پروژه‌ها هنوز مشخص نشده‌اند؛ تاریخ نامشخص آرشیو «—» است. **«Archive»** موقتاً همان پروژه‌های موجود را نمایش می‌دهد و برای مجموعهٔ مستقل لوگو یا هویت بصری به تصاویر و مشخصات آن نیاز دارد.
 
-برای هر پروژه فعلاً یک تصویر اصلی در اختیار است؛ نمای مرورگر و نمای نزدیک از همان تصویر ساخته می‌شوند. برای گالری کامل مثل مرجع، تصاویر بیشتر لازم است. WePackaging تصویر ندارد و با نام و دامنه نمایش داده می‌شود. وضعیت `unavailable` برگرفته از بررسی پیشین ۲۰۲۶-۱۰-۱۰ است و پایش زنده نیست.
 
 فونت انگلیسی فعلاً Arial/Helvetica است. فونت مرجع GT Standard است و برای تطابق دقیق تایپوگرافی باید فایل دارای مجوز آن فراهم شود. وزیرمتن محلی برای محتوای احتمالی فارسی نگه داشته شده و مجوزش در `app/fonts/Vazirmatn-LICENSE.txt` است. تصویرهای پروژه، عکس و متن معرفی متعلق به پورتفولیوی فعلی‌اند؛ آیکون ایده به‌صورت SVG بازطراحی شده است.
 
@@ -63,3 +62,21 @@ node tests/browser.mjs
 فاصله‌های معرفی و پروژه‌های منتخب، فاصلهٔ حروف و اندازهٔ متن‌ها، خط جداکنندهٔ پایین صفحه، تورفتگی متن دوم About، شمارنده‌های منوی موبایل و حرکت ورود تک‌تک حروف اصلاح شدند. جابه‌جایی لینک‌های داخلی با حرکت پوشاننده انجام می‌شود؛ با تنظیم کاهش حرکت سیستم، لینک‌ها مستقیم باز می‌شوند. پروژهٔ بدون تصویر در انتخاب دو پروژهٔ صفحهٔ اصلی وارد نمی‌شود، اما در Work باقی است.
 
 `npm test` و `npm run build` موفق بودند. خروجی ایستا در مرورگر برای پنج مسیر اصلی در عرض‌های ۳۲۰، ۳۹۰، ۷۶۸ و ۱۲۸۰ پیکسل بررسی شد و سرریز افقی مشاهده نشد. منوی موبایل، Escape، رفتن به About، هفت صفحهٔ پروژه و لینک Next project نیز بررسی شدند؛ خطای اجرایی در گزارش مرورگر ثبت نشد. تطبیق اندازه‌ها بر مبنای CSS عمومی مرجع انجام شد؛ اتصال مرورگر به سایت مرجع خطا داشت، بنابراین تطبیق تصویری پیکسل‌به‌پیکسل تأیید نشده است. تفاوت فونت و محدودیت تصاویر که بالاتر ذکر شده همچنان برقرار است.
+
+
+## Hiring-focused content — 2026-10-20
+
+The portfolio now targets front-end developer roles. The owner confirmed responsibility for all programming on WePackaging and Fash Ba Tashdid. These are the first two featured projects, followed by ToolBo and IdiomYar. Selection is explicit in data/profile.json under featuredProjects.
+
+Both primary project pages include a role, technology list, development notes, and a guided link to the live experience. WePackaging’s scroll-physics challenge comes from the owner; implementation details were checked against the local project source. Fash’s notes describe implemented features without inventing a personal challenge or business metrics. Design ownership, project dates, and total years of experience remain unclaimed. Professional roles and their dates are now sourced from the owner’s résumé (see below).
+
+Optional project fields: summary, role, technologies, caseStudy (title, intro, sections, explore), and gallery (src, alt, width, height, caption). Home and project pages provide direct email contact. Gallery images are distinct assets, not repeated crops of the cover. WePackaging now has two real screenshots. All seven live project URLs returned HTTP 200 on 2026-10-20; this is a point-in-time check.
+
+The existing Sites identity is retained. Its access was owner-only at the start of this update; deployment does not automatically make it public. A public audience is a separate setting required before sharing with employers.
+
+
+## Résumé content — 2026-11-02
+
+The owner supplied Abolfazl_Jamshidi_Frontend_CV.pdf as a content source. The portfolio now includes Tehran, Iran; availability for full-time on-site or remote roles; LinkedIn; experience at Avan Tech and Worldbuilderzzz (both 2025–present); and grouped technical skills. Experience and skills are maintained in data/profile.json and rendered on About. Framer Motion is retained from the existing, source-checked project content.
+
+Project descriptions now specify Worldbuilderzzz’s co-founder/technical-lead role, the desktop-style Mehdi Arman portfolio, and IdiomYar’s audio, bilingual text, AI-generated practice stories, flashcards, and saved idioms. IdiomYar also has a feature-focused development note. No business metrics, project dates, or total experience figures were inferred. The original résumé and phone number are not published.

@@ -1,15 +1,10 @@
 # Account Usage Preference
 
-The 10% reserve for the 300-minute Codex usage window applies only to prompts
-using the personal Codex account `abolfazl.j.dev@gmail.com`
-(account ID `e4b7337a-ce2f-4474-b14b-f49c82995514`).
-Check usage before work on that account and stop when `usedPercent > 90`.
-
-When the user explicitly identifies CodexAra as the provider for the current
-prompt, ignore the native Codex quota reserve for that request. Do not infer
-the active provider or account from the account used by a connected plugin.
-If the prompt's account is uncertain and no explicit override was given, ask
-the user to clarify before substantive work.
+The user revoked the mandatory usage-check and 10% reserve instructions.
+Do not ask which account or provider is active, including CodexAra versus
+personal Codex. Continue the requested work without account clarification.
+Check usage only when explicitly requested by the user. This preference
+does not change the application's actual usage limits.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

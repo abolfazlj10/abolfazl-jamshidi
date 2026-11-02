@@ -95,8 +95,7 @@ export function Header({ projectCount, archiveCount }) {
   return <header className={`site-header${menuOpen ? ' menu-is-open' : ''}`}>
     <nav className="navbar" aria-label="Main navigation">
       <Link className="wordmark" href="/" aria-label={`${profile.name} — Home`} tabIndex={menuOpen ? -1 : undefined} onClick={() => setMenuOpen(false)}>
-        <span className="brand-symbol" aria-hidden="true">aj.</span>
-        <span className="brand-copy"><span className="brand-name">{profile.name}</span><span className="brand-role">Front-end developer</span></span>
+        <span className="brand-name">{profile.name}</span>
       </Link>
       <div className="desktop-links">{links.map((link) => <Link href={link.href} key={link.href} aria-current={currentPage(link.href)} className="nav-link"><span>{link.label}</span>{link.count !== undefined && <span className="nav-count">{link.count}</span>}</Link>)}</div>
       <a className="nav-contact" href={`mailto:${profile.email}`}><span>Get in touch</span><ArrowUpRight size={16} strokeWidth={1.75} aria-hidden="true" /></a>
