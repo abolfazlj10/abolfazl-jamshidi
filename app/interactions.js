@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from './navigation';
 import { usePathname } from 'next/navigation';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import profile from '../data/profile.json';
 
 export function Entrance() {
@@ -60,6 +61,8 @@ export function Header({ projectCount, archiveCount }) {
   const menuRef = useRef(null);
   const toggleRef = useRef(null);
   const links = [{ href: '/', label: 'Home' }, { href: '/work/', label: 'Work', count: projectCount }, { href: '/archive/', label: 'Archive', count: archiveCount }, { href: '/about/', label: 'About' }];
+  const currentPath = pathname === '/' ? '/' : `${pathname.replace(/\/$/, '')}/`;
+  const currentPage = (href) => currentPath === href ? 'page' : undefined;
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -77,7 +80,7 @@ export function Header({ projectCount, archiveCount }) {
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     }
-    const desktop = window.matchMedia('(min-width: 769px)');
+    const desktop = window.matchMedia('(min-width: 901px)');
     function closeOnDesktop(event) { if (event.matches) setMenuOpen(false); }
     desktop.addEventListener('change', closeOnDesktop);
     document.addEventListener('keydown', onKeyDown);
@@ -91,15 +94,18 @@ export function Header({ projectCount, archiveCount }) {
 
   return <header className={`site-header${menuOpen ? ' menu-is-open' : ''}`}>
     <nav className="navbar" aria-label="Main navigation">
-      <Link className="wordmark" href="/" onClick={() => setMenuOpen(false)}>©AbolfazlJamshidi</Link>
-      <div className="desktop-links">{links.slice(1).map((link) => <Link href={link.href} key={link.href} aria-current={pathname === link.href || `${pathname}/` === link.href ? 'page' : undefined} className="nav-link"><span>{link.label}</span>{link.count !== undefined && <sup>({link.count})</sup>}</Link>)}</div>
-      <a className="nav-contact" href={`mailto:${profile.email}`}>Get in touch</a>
-      <button ref={toggleRef} className="menu-toggle" aria-expanded={menuOpen} aria-controls="mobile-menu" onClick={() => setMenuOpen((open) => !open)}>{menuOpen ? 'Close' : 'Menu'}</button>
+      <Link className="wordmark" href="/" aria-label={`${profile.name} — Home`} tabIndex={menuOpen ? -1 : undefined} onClick={() => setMenuOpen(false)}>
+        <span className="brand-symbol" aria-hidden="true">aj.</span>
+        <span className="brand-copy"><span className="brand-name">{profile.name}</span><span className="brand-role">Front-end developer</span></span>
+      </Link>
+      <div className="desktop-links">{links.map((link) => <Link href={link.href} key={link.href} aria-current={currentPage(link.href)} className="nav-link"><span>{link.label}</span>{link.count !== undefined && <span className="nav-count">{link.count}</span>}</Link>)}</div>
+      <a className="nav-contact" href={`mailto:${profile.email}`}><span>Get in touch</span><ArrowUpRight size={16} strokeWidth={1.75} aria-hidden="true" /></a>
+      <button ref={toggleRef} className="menu-toggle" aria-expanded={menuOpen} aria-controls={menuOpen ? 'mobile-menu' : undefined} onClick={() => setMenuOpen((open) => !open)}><span>{menuOpen ? 'Close' : 'Menu'}</span>{menuOpen ? <X size={18} strokeWidth={1.75} aria-hidden="true" /> : <Menu size={18} strokeWidth={1.75} aria-hidden="true" />}</button>
     </nav>
     {menuOpen && <div className="mobile-menu" id="mobile-menu" ref={menuRef}>
-      <p>[ Navigation ]</p>
-      <nav aria-label="Mobile navigation">{links.map((link, index) => <Link key={link.href} href={link.href} style={{ '--order': index }} onClick={() => setMenuOpen(false)}>{link.label}{link.count !== undefined && <sup>({link.count})</sup>}</Link>)}</nav>
-      <a className="menu-contact" href={`mailto:${profile.email}`}>→ Get in touch</a>
+      <p className="menu-eyebrow">Explore the portfolio</p>
+      <nav aria-label="Mobile navigation">{links.map((link, index) => <Link key={link.href} href={link.href} aria-current={currentPage(link.href)} style={{ '--order': index }} onClick={() => setMenuOpen(false)}><span>{link.label}</span>{link.count !== undefined ? <span className="menu-count">{link.count}</span> : <ArrowUpRight size={24} strokeWidth={1.5} aria-hidden="true" />}</Link>)}</nav>
+      <div className="menu-footer"><p>Have something in mind?</p><a className="menu-contact" href={`mailto:${profile.email}`}><span>Get in touch</span><ArrowUpRight size={24} strokeWidth={1.5} aria-hidden="true" /></a></div>
     </div>}
   </header>;
 }
