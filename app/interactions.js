@@ -20,6 +20,12 @@ export function Entrance() {
     const total = images.length + 1;
     const root = document.documentElement;
     root.classList.add('booting');
+    // Hydration may happen after CSS animations have already begun.
+    for (const animation of document.getAnimations()) {
+      if (animation.playState === 'paused' && animation.effect?.target?.closest('#page-content')) {
+        animation.currentTime = 0;
+      }
+    }
     setLoading({ progress: 0, exiting: false });
     function finish() {
       if (!active || finished) return;
@@ -29,8 +35,11 @@ export function Entrance() {
       finishTimer = setTimeout(() => {
         if (!active) return;
         setLoading({ progress: 100, exiting: true });
-        root.classList.remove('booting');
-        exitTimer = setTimeout(() => { if (active) setLoading(null); }, 700);
+        exitTimer = setTimeout(() => {
+          if (!active) return;
+          setLoading(null);
+          root.classList.remove('booting');
+        }, 700);
       }, Math.max(0, 350 - (performance.now() - started)));
     }
     function advance() {
