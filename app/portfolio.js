@@ -13,7 +13,7 @@ export function InfoRow({ label, text, action }) {
 }
 
 export function ProjectVisual({ project, className = '', priority = false }) {
-  return <div className={`project-visual ${className}`} style={{ '--project-color': project.accent, aspectRatio: project.imageAspectRatio, height: project.imageAspectRatio ? 'auto' : undefined }}>
+  return <div className={`project-visual ${className}`} style={{ '--project-color': project.accent, '--project-aspect-ratio': project.imageAspectRatio }}>
     {project.image ? <img src={project.image} alt={`${project.title} website preview`} width="1440" height="900" loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : 'auto'} />
       : <div className="project-placeholder"><span>{project.title}</span><small>{new URL(project.demo).hostname}</small></div>}
   </div>;

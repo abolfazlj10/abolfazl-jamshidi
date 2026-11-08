@@ -157,7 +157,7 @@ a,button { -webkit-tap-highlight-color: transparent; }
 .project-screenshot img { height: auto; border: 1px solid var(--line); border-radius: 4px; }
 .project-screenshot figcaption { margin-block: 1rem 2rem; color: #595959; line-height: 1.5; }
 .project-page + .site-footer { margin-top: 8vw; }
-.project-cover { height: auto; aspect-ratio: 1.57; }
+.project-cover { height: auto; aspect-ratio: var(--project-aspect-ratio, 1.57); }
 .project-cover .project-placeholder { min-height: 35vw; }
 .next-project-mobile { display: none; }
 .not-found { min-height: 80dvh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4vw; text-align: center; }
