@@ -6,64 +6,6 @@ import { usePathname } from 'next/navigation';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import profile from '../data/profile.json';
 
-export function Entrance() {
-  const [loading, setLoading] = useState(null);
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    let active = true;
-    let completed = 0;
-    let finishTimer;
-    let exitTimer;
-    let finished = false;
-    const started = performance.now();
-    const images = [...document.images].filter((image) => image.loading !== 'lazy');
-    const total = images.length + 1;
-    const root = document.documentElement;
-    root.classList.add('booting');
-    // Hydration may happen after CSS animations have already begun.
-    for (const animation of document.getAnimations()) {
-      if (animation.playState === 'paused' && animation.effect?.target?.closest('#page-content')) {
-        animation.currentTime = 0;
-      }
-    }
-    setLoading({ progress: 0, exiting: false });
-    function finish() {
-      if (!active || finished) return;
-      finished = true;
-      clearTimeout(timeout);
-      setLoading({ progress: 100, exiting: false });
-      finishTimer = setTimeout(() => {
-        if (!active) return;
-        setLoading({ progress: 100, exiting: true });
-        exitTimer = setTimeout(() => {
-          if (!active) return;
-          setLoading(null);
-          root.classList.remove('booting');
-        }, 700);
-      }, Math.max(0, 350 - (performance.now() - started)));
-    }
-    function advance() {
-      if (!active || finished) return;
-      completed += 1;
-      setLoading({ progress: Math.round(completed / total * 100), exiting: false });
-      if (completed === total) finish();
-    }
-    // A failed image or slow font must never prevent access to the portfolio.
-    const timeout = setTimeout(finish, 2000);
-    for (const image of images) image.decode().catch(() => {}).then(advance);
-    (document.fonts?.ready || Promise.resolve()).then(advance, advance);
-    return () => {
-      active = false;
-      clearTimeout(timeout);
-      clearTimeout(finishTimer);
-      clearTimeout(exitTimer);
-      root.classList.remove('booting');
-    };
-  }, []);
-  if (!loading) return null;
-  return <div className={`entrance${loading.exiting ? ' entrance-exit' : ''}`} aria-hidden="true"><span>{loading.progress}%</span></div>;
-}
-
 export function Header({ projectCount, archiveCount }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);

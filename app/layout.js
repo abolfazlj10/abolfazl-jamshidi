@@ -1,7 +1,7 @@
 import { NavigationProvider } from './navigation';
 import localFont from 'next/font/local';
 import './globals.css';
-import { Entrance, Header, PageMotion } from './interactions';
+import { Header, PageMotion } from './interactions';
 import projects from '../data/projects.json';
 
 const vazirmatn = localFont({
@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr" data-scroll-behavior="smooth">
       <body className={vazirmatn.variable}>
-        <Entrance />
         <a className="skip-link" href="#main-content">Skip to content</a>
         <NavigationProvider>
           <Header projectCount={projects.length} archiveCount={projects.length} />
