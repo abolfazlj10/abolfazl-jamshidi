@@ -3,7 +3,7 @@ import profile from '../../data/profile.json';
 
 export const metadata = {
   title: 'About — Abolfazl Jamshidi',
-  description: 'Front-end developer in Tehran. Experience at Avan Tech and Worldbuilderzzz, building product interfaces and interactive websites with React, Next.js, and TypeScript.',
+  description: 'Full-stack developer with a front-end focus, based in Tehran. Experience at Avan Tech and Worldbuilderzzz spans product interfaces, backend APIs, and data modelling.',
 };
 export default function About() {
   return <main id="main-content" className="about-page">

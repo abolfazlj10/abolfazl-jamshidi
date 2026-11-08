@@ -161,6 +161,7 @@ a,button { -webkit-tap-highlight-color: transparent; }
 .project-details { display: flex; flex-direction: column; gap: 2vw; line-height: 1.25; }
 .project-fact h2 { font-size: .8em; color: #595959; margin-bottom: .65rem; }
 .project-fact ul { line-height: 1.5; }
+.project-fact .project-tech-list { display: flex; flex-wrap: wrap; gap: .3rem .75rem; font-size: .9em; }
 .project-story { padding: clamp(24px, 3.5vw, 64px) 0; line-height: 1.65; }
 .story-label { color: #595959; font-size: 13px; margin-bottom: 1rem; }
 .project-story > h2 { font-size: clamp(28px, 2.8vw, 48px); line-height: 1.15; text-wrap: balance; max-width: 22ch; margin-bottom: 1.5rem; }
@@ -175,6 +176,7 @@ a,button { -webkit-tap-highlight-color: transparent; }
 .project-availability { font-size: .85em; color: #777; }
 .project-gallery { display: flex; flex-direction: column; gap: 1vw; padding: 0 2.5vw 2vw 0; }
 .project-screenshot { margin-top: 2vw; }
+.gallery-group-title { font-size: clamp(24px, 2.2vw, 36px); line-height: 1.2; margin-block: 1rem 1.5rem; }
 .project-screenshot img { height: auto; border: 1px solid var(--line); border-radius: 4px; }
 .project-screenshot figcaption { margin-block: 1rem 2rem; color: #595959; line-height: 1.5; }
 .project-page + .site-footer { margin-top: 8vw; }

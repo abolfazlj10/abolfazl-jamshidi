@@ -7,23 +7,24 @@
   "country": "Iran",
   "whatsapp": null,
   "workingSince": null,
-  "headline": ["Front-end developer.", "Product interfaces. Creative websites."],
-  "featuredProjects": ["wepackaging", "fash-ba-tashdid", "toolbo", "idiomyar"],
-  "availability": "Open to full-time front-end roles · On-site or remote",
-  "approach": "I build product interfaces and creative websites with React, Next.js, and TypeScript. My work spans customer workflows, admin panels, and interactive 3D experiences, with a focus on usability and responsive layouts.",
+  "headline": ["Full-stack developer.", "Front-end focused."],
+  "featuredProjects": ["avani", "wepackaging", "fash-ba-tashdid", "toolbo", "idiomyar"],
+  "availability": "Open to full-time full-stack & front-end roles · On-site or remote",
+  "approach": "I build web products across the front end and back end, with a focus on usable interfaces. My work connects React, Next.js, and TypeScript interfaces with server-side APIs and data models, alongside creative websites and interactive 3D experiences.",
   "intro": [
-    "I’m Abolfazl, a front-end developer based in Tehran, working with React, Next.js, and TypeScript. I build product interfaces, admin panels, and brand websites, with a particular interest in motion and interactive 3D experiences.",
-    "At Avan Tech, I develop customer and admin workflows. As co-founder and technical lead at Worldbuilderzzz, I lead end-to-end development of the team’s products and websites. I handled all programming for WePackaging and Fash Ba Tashdid, from the first interaction to individual project pages."
+    "I’m Abolfazl, a full-stack developer based in Tehran with a focus on front-end development. I work with React, Next.js, and TypeScript to build product interfaces, admin panels, and brand websites, and implement the server-side APIs and data models behind product workflows. I have a particular interest in motion and interactive 3D experiences.",
+    "At Avan Tech, I develop customer and admin workflows across the front end and back end. For Avani’s returns workflow, I defined the data model and implemented the backend APIs alongside the admin and branch interfaces. As co-founder and technical lead at Worldbuilderzzz, I lead end-to-end development of the team’s products and websites. I handled all programming for WePackaging and Fash Ba Tashdid, from the first interaction to individual project pages."
   ],
   "experience": [
     {
       "company": "Avan Tech",
-      "role": "Front-end Developer",
+      "role": "Full-stack Developer · Front-end Focus",
       "period": "2025 – Present",
       "employment": "Full-time",
       "highlights": [
+        "Developed Avani’s product catalogue and online sales interfaces. Implemented the returns workflow across the stack, from specifications and data modelling to backend APIs and admin and branch panel changes.",
         "Expanded Madar Market’s customer account with wallet withdrawal requests, product returns and tracking, transaction history, notifications, and order cancellation. Improved admin tools for homepage sections and promotions.",
-        "Built Talaresoon’s admin interfaces for orders, product variants, customers, categories, and dashboards, plus product listing and category routes for the mobile client.",
+        "Built Talaresoon’s admin interfaces for orders, product variants, customers, categories, and dashboards, and implemented backend routes for product listings and categories used by the mobile client.",
         "Implemented user interfaces for Bamadarfood."
       ]
     },
@@ -43,5 +44,5 @@
     { "label": "Back-end", "items": ["Bun", "Elysia", "Prisma", "PostgreSQL"] },
     { "label": "Development", "items": ["Git", "Monorepo workflows", "UI implementation", "Usability improvements"] }
   ],
-  "contact": "I’m open to full-time front-end roles, on-site or remote. If your team is hiring, I’d like to hear what you’re building."
+  "contact": "I’m open to full-time full-stack and front-end roles, on-site or remote. If your team is hiring, I’d like to hear what you’re building."
 }

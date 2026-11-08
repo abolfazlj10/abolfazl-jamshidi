@@ -66,7 +66,7 @@ node tests/browser.mjs
 
 ## Hiring-focused content — 2026-10-20
 
-The portfolio now targets front-end developer roles. The owner confirmed responsibility for all programming on WePackaging and Fash Ba Tashdid. These are the first two featured projects, followed by ToolBo and IdiomYar. Selection is explicit in data/profile.json under featuredProjects.
+The portfolio presents the owner as a full-stack developer with a front-end focus, open to both full-stack and front-end roles. The owner confirmed responsibility for all programming on WePackaging and Fash Ba Tashdid. Avani leads the featured projects, followed by WePackaging, Fash Ba Tashdid, ToolBo, and IdiomYar. Selection is explicit in data/profile.json under featuredProjects.
 
 Both primary project pages include a role, technology list, development notes, and a guided link to the live experience. WePackaging’s scroll-physics challenge comes from the owner; implementation details were checked against the local project source. Fash’s notes describe implemented features without inventing a personal challenge or business metrics. Design ownership, project dates, and total years of experience remain unclaimed. Professional roles and their dates are now sourced from the owner’s résumé (see below).
 

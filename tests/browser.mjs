@@ -16,7 +16,7 @@ try {
   assert.equal(await page.getByRole('button', { name: 'Play project slideshow' }).getAttribute('aria-pressed'), 'true');
   await page.getByRole('link', { name: 'See all works', exact: true }).filter({ visible: true }).click();
   await page.waitForURL('**/work/');
-  assert.equal(await page.locator('.project-card').count(), 7);
+  assert.equal(await page.locator('.project-card').count(), 8);
   const routes = await page.locator('.project-card').evaluateAll((links) => links.map((link) => link.href));
   for (const route of routes) {
     await page.goto(route);
@@ -29,7 +29,7 @@ try {
   }
   for (const width of [320, 390, 768, 1280, 1920]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const route of ['/', '/work/', '/archive/', '/about/', '/project/worldbuilderzzz/']) {
+    for (const route of ['/', '/work/', '/archive/', '/about/', '/project/worldbuilderzzz/', '/project/avani/']) {
       await page.goto(`${baseURL}${route}`);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `no overflow: ${width} ${route}`);
     }

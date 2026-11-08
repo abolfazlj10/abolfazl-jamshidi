@@ -1,12 +1,163 @@
 [
   {
+    "id": "avani",
+    "title": "Avani",
+    "summary": "Full-stack development · Product management, online orders, and returns APIs with admin and branch interfaces.",
+    "category": "ERP & COMMERCE",
+    "description": "Avani is an ERP platform for product, inventory, and sales operations, connected to Madar Market. At Avan Tech, I developed product catalogue and online sales interfaces and implemented the returns workflow across the front end and back end, including its data model, backend APIs, and admin and branch panel changes.",
+    "role": "Full-stack Developer at Avan Tech — front-end focus, backend APIs, and data modelling",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Radix UI",
+      "TanStack Query",
+      "TanStack Table",
+      "React Hook Form",
+      "Zod",
+      "Zustand",
+      "Bun",
+      "Elysia",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "caseStudy": {
+      "title": "Making everyday operations easier to navigate",
+      "intro": "My work centred on helping panel users find information, act on products, and handle online orders. It combined front-end development and UX decisions with server-side implementation. For the returns workflow, I defined the data model, implemented the backend APIs, and built the corresponding admin and branch interfaces.",
+      "sections": [
+        {
+          "title": "Rebuilding product management",
+          "text": "The existing interface lacked a clear structure for product information and quick actions. Starting from an initial design, I developed a new product management workspace and brought over the previous feature set. A main table, a side table for product selection, and tabbed detail pages organized information and actions into a more usable workflow."
+        },
+        {
+          "title": "Connecting order preparation to customer updates",
+          "text": "We established a connection between the panel and the online store so that order status updates follow the preparation workflow automatically. This keeps customers informed about the stage their order has reached as the branch processes it."
+        },
+        {
+          "title": "Reviewing returns before dispatching a courier",
+          "text": "The branch needed enough information to assess a reported product issue before sending a courier. The returns flow lets customers provide descriptions and photos with their request, so branch staff can review the evidence and decide whether to dispatch a courier or reject the request. I defined the implementation specifications, data model, and customer, courier, and branch workflows, then implemented the backend APIs and the admin and branch panel changes."
+        }
+      ],
+      "explore": "Browse the screenshots below, grouped by product management, inventory monitoring, storefront management, and online orders. The live panel requires an account."
+    },
+    "tags": [
+      "ERP",
+      "Product management",
+      "Online sales",
+      "Panel UX"
+    ],
+    "accent": "#b9b2f6",
+    "image": "/projects/avani/catalog-overview.webp",
+    "imageAspectRatio": "3948 / 2674",
+    "gallery": [
+      {
+        "src": "/projects/avani/catalog-overview.webp",
+        "alt": "Avani ERP — The main product table brings catalogue information and quick actions together.",
+        "width": 3948,
+        "height": 2674,
+        "sectionTitle": "Product management",
+        "caption": "The main product table brings catalogue information and quick actions together."
+      },
+      {
+        "src": "/projects/avani/catalog-side-table.webp",
+        "alt": "Avani ERP — A side table keeps product selection available while working through detailed information.",
+        "width": 3948,
+        "height": 2674,
+        "caption": "A side table keeps product selection available while working through detailed information."
+      },
+      {
+        "src": "/projects/avani/catalog-stock.webp",
+        "alt": "Avani ERP — Stock information is accessible within the same product detail workspace.",
+        "width": 3948,
+        "height": 2674,
+        "caption": "Stock information is accessible within the same product detail workspace."
+      },
+      {
+        "src": "/projects/avani/catalog-online-details.webp",
+        "alt": "Avani ERP — Online product details use the same side-table and tabbed layout.",
+        "width": 3948,
+        "height": 2674,
+        "caption": "Online product details use the same side-table and tabbed layout."
+      },
+      {
+        "src": "/projects/avani/catalog-online-settings.webp",
+        "alt": "Avani ERP — Online product settings are organized in a dedicated tab.",
+        "width": 3948,
+        "height": 2674,
+        "caption": "Online product settings are organized in a dedicated tab."
+      },
+      {
+        "src": "/projects/avani/inventory-cards.webp",
+        "alt": "Avani ERP — A card view presents product availability for operational review.",
+        "width": 3948,
+        "height": 2674,
+        "sectionTitle": "Inventory monitoring",
+        "caption": "A card view presents product availability for operational review."
+      },
+      {
+        "src": "/projects/avani/inventory-monitoring.webp",
+        "alt": "Avani ERP — Product stock monitoring brings availability indicators into a scannable grid.",
+        "width": 3948,
+        "height": 2674,
+        "caption": "Product stock monitoring brings availability indicators into a scannable grid."
+      },
+      {
+        "src": "/projects/avani/storefront-sections.webp",
+        "alt": "Avani ERP — The panel organizes the categories and product sections shown in the online store.",
+        "width": 3948,
+        "height": 2674,
+        "sectionTitle": "Online storefront",
+        "caption": "The panel organizes the categories and product sections shown in the online store."
+      },
+      {
+        "src": "/projects/avani/orders-board.webp",
+        "alt": "Avani ERP — Orders are grouped by stage to support day-to-day order handling.",
+        "width": 3948,
+        "height": 2674,
+        "sectionTitle": "Online orders",
+        "caption": "Orders are grouped by stage to support day-to-day order handling."
+      },
+      {
+        "src": "/projects/avani/orders-stages.webp",
+        "alt": "Avani ERP — The order board keeps operational stages and order information visible together.",
+        "width": 3948,
+        "height": 2674,
+        "caption": "The order board keeps operational stages and order information visible together."
+      },
+      {
+        "src": "/projects/avani/order-details.webp",
+        "alt": "Avani ERP — Order details combine customer and delivery information with the progress timeline.",
+        "width": 3948,
+        "height": 2674,
+        "caption": "Order details combine customer and delivery information with the progress timeline."
+      },
+      {
+        "src": "/projects/avani/order-items.webp",
+        "alt": "Avani ERP — Collected quantities, payment details, and fulfilment progress appear in the order workspace.",
+        "width": 3948,
+        "height": 2674,
+        "caption": "Collected quantities, payment details, and fulfilment progress appear in the order workspace."
+      }
+    ],
+    "repo": null,
+    "demo": "https://market.avani.website",
+    "status": "private"
+  },
+  {
     "id": "wepackaging",
     "title": "WePackaging",
     "summary": "Sole developer · An interactive 3D portfolio with custom scroll physics.",
     "category": "PACKAGING & BRANDING",
     "description": "A website for a branding and packaging studio, with an interactive 3D gallery at its centre. I handled all programming, including the motion and scrolling that shape how visitors explore the work.",
     "role": "Sole developer — all website programming",
-    "technologies": ["Next.js", "React", "TypeScript", "Three.js", "Lenis"],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Three.js",
+      "Lenis"
+    ],
     "caseStudy": {
       "title": "Making scrolling feel natural",
       "intro": "The most demanding part of this project was getting the physics and scrolling to feel right. Motion is central to the way visitors move through the studio’s work.",
@@ -104,7 +255,13 @@
     "category": "CREATIVE COLLECTIVE",
     "description": "A website for a creative collective, bringing its services, people, and project archive together. I handled all programming, including the homepage, service pages, project pages, and image galleries.",
     "role": "Sole developer — all website programming",
-    "technologies": ["Next.js", "React", "TypeScript", "Framer Motion", "Tailwind CSS"],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Framer Motion",
+      "Tailwind CSS"
+    ],
     "caseStudy": {
       "title": "A complete website for a creative collective",
       "intro": "I was responsible for turning the visual direction into a working website. The scope covered the whole experience, from the first screen to individual service and project pages.",
@@ -151,7 +308,11 @@
     "category": "EVERYDAY TOOLS",
     "description": "I built ToolBo to bring everyday utility tools together in one place, from calculators to converters. Built with Next.js and React, the app organizes practical tools in one accessible interface.",
     "role": "Developer",
-    "technologies": ["Next.js", "React", "Tailwind CSS"],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
     "tags": [
       "Next.js",
       "React",
