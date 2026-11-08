@@ -29,7 +29,7 @@ try {
   }
   for (const width of [320, 390, 768, 1280, 1920]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const route of ['/', '/work/', '/archive/', '/about/', '/project/worldbuilderzzz/', '/project/avani/']) {
+    for (const route of ['/', '/work/', '/about/', '/project/worldbuilderzzz/', '/project/avani/']) {
       await page.goto(`${baseURL}${route}`);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `no overflow: ${width} ${route}`);
     }

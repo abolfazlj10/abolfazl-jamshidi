@@ -6,12 +6,12 @@ import { usePathname } from 'next/navigation';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import profile from '../data/profile.json';
 
-export function Header({ projectCount, archiveCount }) {
+export function Header({ projectCount }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const toggleRef = useRef(null);
-  const links = [{ href: '/', label: 'Home' }, { href: '/work/', label: 'Work', count: projectCount }, { href: '/archive/', label: 'Archive', count: archiveCount }, { href: '/about/', label: 'About' }];
+  const links = [{ href: '/', label: 'Home' }, { href: '/work/', label: 'Work', count: projectCount }, { href: '/about/', label: 'About' }];
   const currentPath = pathname === '/' ? '/' : `${pathname.replace(/\/$/, '')}/`;
   const currentPage = (href) => currentPath === href ? 'page' : undefined;
 
@@ -86,16 +86,5 @@ export function HeroName({ projects }) {
     </button>
     <span className="hero-word hero-word-last" aria-hidden="true">{[..."fazl"].map((letter, index) => <span className="hero-letter" style={{ "--letter": index + 4 }} key={index}>{letter}</span>)}</span>
     <span className="sr-only">Abolfazl Jamshidi</span>
-  </div>;
-}
-
-export function ArchiveList({ projects }) {
-  return <div className="archive-list">
-    <div className="archive-columns archive-list-header" aria-hidden="true"><span>[ Name ]</span><span>[ Detail ]</span><span>[ Date ]</span></div>
-    {projects.map((project) => <Link className="archive-row" key={project.id} href={`/project/${project.id}/`} data-reveal aria-label={`${project.title}, ${project.tags[0]}`}>
-      <div className="archive-columns"><span>{project.title}</span><span>{project.tags[0]}</span><span>{project.year || '—'}</span></div>
-      <div className="archive-preview" style={{ background: project.accent }}>{project.image ? <img src={project.image} alt={`${project.title} preview`} width="600" height="600" loading="lazy" /> : <span>{project.title}</span>}</div>
-      <span className="archive-mobile-label">{project.title}</span>
-    </Link>)}
   </div>;
 }

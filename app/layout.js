@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body className={vazirmatn.variable}>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <NavigationProvider>
-          <Header projectCount={projects.length} archiveCount={projects.length} />
+          <Header projectCount={projects.length} />
           <PageMotion>{children}</PageMotion>
         </NavigationProvider>
       </body>
