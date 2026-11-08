@@ -184,13 +184,13 @@
     ],
     "accent": "#dfcaad",
     "image": "/projects/wepackaging.png",
-    "imageAspectRatio": "1914 / 1238",
+    "imageAspectRatio": "2000 / 1212",
     "gallery": [
       {
         "src": "/projects/wepackaging-intro.png",
         "alt": "WePackaging opening screen with a curved grid and large wordmark",
-        "width": 1280,
-        "height": 800,
+        "width": 2000,
+        "height": 1212,
         "caption": "The opening screen leads into the interactive project gallery."
       }
     ],
