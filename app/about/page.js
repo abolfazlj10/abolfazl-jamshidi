@@ -1,4 +1,5 @@
 import { ArrowLink } from '../portfolio';
+import Portrait from './portrait';
 import profile from '../../data/profile.json';
 
 export const metadata = {
@@ -8,7 +9,7 @@ export const metadata = {
 export default function About() {
   return <main id="main-content" className="about-page">
     <h1 className="sr-only">About Abolfazl Jamshidi</h1>
-    <div className="about-portrait"><div className="portrait-frame"><img src="/images/abolfazl.png" alt="Abolfazl Jamshidi" width="1024" height="1536" fetchPriority="high" /></div></div>
+    <Portrait />
     <div className="about-content">
       <div className="about-intro">{profile.intro.map((paragraph) => <p key={paragraph} data-reveal>{paragraph}</p>)}</div>
       <div className="about-details">
