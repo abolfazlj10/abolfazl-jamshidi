@@ -1,14 +1,16 @@
 # Project cover generation — revised direction
 
-Generated with the built-in image generation tool. Final assets: `public/projects/idiomyar-cover.webp`, `public/projects/toolbo-cover.webp`, and `public/projects/avani-cover.webp` (1672 × 941, WebP).
+Final assets: `public/projects/idiomyar-cover.webp`, `public/projects/toolbo-cover.webp`, and `public/projects/avani-cover.webp` (1672 × 941, WebP). ToolBo and Avani were generated with the built-in image generation tool. IdiomYar uses a flat, typographic SVG source exported to WebP.
 
 Each cover has its own composition; the Fash device mockup is no longer used as a reference. Source application screenshots are preserved. Covers are conceptual product illustrations, not exact interface screenshots.
 
 ## idiomyar
 
-Reference: `/Users/abolfazl/workspace/idiomYar/public/screenshot/flashCards.png`
+Source: `public/projects/idiomyar-cover.svg`.
 
-Use case: ads-marketing. Create a distinctive polished editorial portfolio cover for IdiomYar, English idiom practice app. Landscape 16:9, 1672x941. Reference is actual UI for content, typography and blue accents only, NOT screenshot framing. Art direction: tactile white flashcards fanned across a vivid cobalt-blue background with a softly embossed oversized speech bubble. Overhead view, beautiful soft daylight shadows, crisp print-like lettering, restrained playful learning brand. Main large off-white card tilted -8 degrees in center reads 'to take off' in very bold dark type, underneath 'to remove (usually said of clothes)' and a small blue audio icon; small bottom example 'John took off his jacket.' Two partially hidden cards behind labeled 'Flash Cards' and 'Lesson 1', one mint accent card with a simple checkmark. Small but readable IdiomYar wordmark at upper center. Strong scale and intentional negative space, central 75% of image contains all important elements for thumbnail cropping. No laptops, phones, screens, books, pencils, dark studio desk, neon strips, ornamental clutter, fake statistics or long text. Premium graphic design with subtle physical 3D paper depth, not a generic screenshot.
+Minimal typography on a flat warm off-white background. A centred dark wordmark with a blue accent on “Yar”, and the existing product tagline, “Idioms that stay with you.” Generous empty space keeps the cover readable in the project grid. No textures, mockups, shadows, or illustrations.
+
+Export at the source size (1672 × 941) using Sharp with WebP quality 95. The portfolio continues to use `idiomyar-cover.webp`.
 
 ## toolbo
 
