@@ -48,8 +48,8 @@
       "Panel UX"
     ],
     "accent": "#b9b2f6",
-    "image": "/projects/avani/catalog-overview.webp",
-    "imageAspectRatio": "3948 / 2674",
+    "image": "/projects/avani-cover.webp",
+    "imageAspectRatio": "1672 / 941",
     "gallery": [
       {
         "src": "/projects/avani/catalog-overview.webp",
@@ -320,8 +320,8 @@
     ],
     "accent": "#c2f970",
     "icon": "toolbox",
-    "image": "/projects/toolbo-mockup.png",
-    "imageAspectRatio": "1536 / 1024",
+    "image": "/projects/toolbo-cover.webp",
+    "imageAspectRatio": "1672 / 941",
     "gallery": [
       {
         "src": "/projects/toolbo.png",
@@ -368,9 +368,10 @@
     ],
     "accent": "#88e2c7",
     "icon": "language",
-    "image": "/projects/idiomyar.png",
+    "image": "/projects/idiomyar-cover.webp",
     "repo": "https://github.com/abolfazlj10/IdiomYar",
     "demo": "https://www.idiomyar.ir/",
-    "status": "available"
+    "status": "available",
+    "imageAspectRatio": "1672 / 941"
   }
 ]
