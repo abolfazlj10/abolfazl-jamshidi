@@ -4,9 +4,9 @@ import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'mo
 
 export default function Portrait() {
   const shouldReduceMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll();
-  const progress = useSpring(scrollYProgress, { stiffness: 60, damping: 25, restDelta: 0.0001 });
-  const scale = useTransform(progress, [0, 1], [1, 1.3]);
+  const { scrollY } = useScroll();
+  const zoom = useTransform(scrollY, [0, 800, 2400], [1, 1.3, 1.45]);
+  const scale = useSpring(zoom, { stiffness: 180, damping: 28, restDelta: 0.001 });
 
   return <div className="about-portrait"><div className="portrait-frame">
     <motion.img
