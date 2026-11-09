@@ -1,8 +1,8 @@
 # Project cover generation — revised direction
 
-Final assets: `public/projects/idiomyar-cover.webp`, `public/projects/toolbo-cover.webp`, and `public/projects/avani-cover.webp` (1672 × 941, WebP). ToolBo and Avani were generated with the built-in image generation tool. IdiomYar uses a flat, typographic SVG source exported to WebP.
+Final assets: `public/projects/idiomyar-cover.webp`, `public/projects/toolbo-cover.webp`, and `public/projects/avani-cover.webp` (1672 × 941, WebP). ToolBo was generated with the built-in image generation tool. IdiomYar uses a typographic SVG source, and Avani uses an SVG composition with an embedded application screenshot, both exported to WebP.
 
-Each cover has its own composition; the Fash device mockup is no longer used as a reference. Source application screenshots are preserved. Covers are conceptual product illustrations, not exact interface screenshots.
+Each cover has its own composition; the Fash device mockup is no longer used as a reference. Source application screenshots are preserved. Avani's cover uses a crop of its real interface with customer details concealed; the other covers use typography or conceptual product illustrations.
 
 ## idiomyar
 
@@ -20,7 +20,9 @@ Use case: ads-marketing. Create a distinctive premium portfolio cover for toolbo
 
 ## avani
 
-Reference: `/Users/abolfazl/workspace/abolfazl/public/projects/avani/orders-board.webp`
+Source: `public/projects/avani-cover.svg`.
 
-Use case: ui-mockup. Completely redesign a premium portfolio cover for Avani ERP. Landscape 16:9, 1672x941. Reference contains actual Avani order-management UI. Extract ONLY white application interface, exclude all black backdrop and browser toolbar. Compose a refined architectural editorial scene: pale lavender seamless background, a single large thin white application panel hovering at a slight 8-degree perspective, angled gently up to the right, with convincing soft ambient shadow. Show a crisp readable crop of the real order kanban board: preserve right-to-left columns, lavender right-hand navigation, white cards and narrow cyan, violet and amber status rules. Enlarge interface so there are fewer visible rows, with clear visual hierarchy, not microscopic data. In foreground near lower left place two restrained matte lavender cubes, one bearing a thin purple package outline and one small checkmark, as commerce/inventory metaphors. Large tasteful dark aubergine 'Avani' wordmark at upper left, small 'ERP & COMMERCE' underneath. UI panel fills center/right 70% and anchors composition, brand title balances it on left. Very light airy premium enterprise art direction, precise geometry, generous margins, no visual clutter. No laptop, phone, tablet, monitor hardware, desk, black backdrop, neon lights, fake charts or performance statistics. Do not reproduce customer names or phone numbers: use neutral pale data lines in those fields. This should be elegant and immediately understandable at thumbnail size, not a giant spreadsheet photograph.
+An editorial composition on a flat pale lavender background (`#e8e3f0`). A large aubergine Avani wordmark (`#392c48`) and product descriptor occupy the upper left; the category and a fine arrow align to the upper right. A large, straight-on crop of `public/projects/avani/orders-board.webp` fills the lower portion and extends beyond the bottom edge. The SVG embeds the source screenshot as PNG data and overlays neutral lines on visible customer names and phone numbers. No perspective, gradients, shadows, textures, or 3D objects.
+
+Export at the source size (1672 × 941) using Sharp with WebP quality 95. The portfolio continues to use `avani-cover.webp`.
 
