@@ -183,15 +183,15 @@
       "Branding"
     ],
     "accent": "#dfcaad",
-    "image": "/projects/wepackaging.png",
+    "image": "/projects/wepackaging-intro.png",
     "imageAspectRatio": "2000 / 1500",
     "gallery": [
       {
-        "src": "/projects/wepackaging-intro.png",
-        "alt": "WePackaging opening screen displayed on a laptop in a rocky landscape",
+        "src": "/projects/wepackaging.png",
+        "alt": "WePackaging interactive project gallery displayed on a phone held by a gloved hand",
         "width": 2000,
         "height": 1500,
-        "caption": "The opening screen leads into the interactive project gallery."
+        "caption": "The interactive project gallery on mobile."
       }
     ],
     "repo": null,
