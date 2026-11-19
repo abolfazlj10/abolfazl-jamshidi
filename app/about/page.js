@@ -26,7 +26,7 @@ export default function About() {
         </section>
         <div className="about-credits">
           <section className="about-info" data-reveal><h2>What’s next</h2><p>{profile.availability}</p></section>
-          <section className="about-info" data-reveal><h2>Credit</h2><p className="muted">Development<br />{profile.name} ©{new Date().getFullYear()}</p><p className="muted reference-credit">Visual reference: <a className="underline-link" href="https://matthieugivelet.com/" target="_blank" rel="noopener noreferrer">Matthieu Givelet ↗</a></p></section>
+          <section className="about-info" data-reveal><h2>Credit</h2><p className="muted">Development<br />{profile.name} ©{new Date().getFullYear()}</p></section>
           <section className="about-info" data-reveal><h2>Social</h2><div className="about-social"><a className="underline-link muted" href={profile.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a className="underline-link muted" href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></section>
           <ArrowLink className="about-contact" href={`mailto:${profile.email}`}>Get in touch</ArrowLink>
         </div>

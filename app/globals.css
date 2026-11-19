@@ -128,7 +128,6 @@ a,button { -webkit-tap-highlight-color: transparent; }
 .service-copy { position: relative; padding-left: 6vw; max-width: 34vw; text-indent: 2vw; }
 .service-copy > span { position: absolute; top: 0; left: 0; text-indent: 0; font-size: 1vw; }
 .muted { color: #666; }
-.about-info .reference-credit { font-size: var(--small); margin-top: -1.8vw; }
 .about-contact { font-size: 3vw; }
 .project-page { display: grid; grid-template-columns: 43vw minmax(0,1fr); align-items: start; }
 .project-info { position: sticky; top: var(--header-height); min-height: calc(100dvh - var(--header-height)); padding: 0 2.5vw 2vw; display: flex; flex-direction: column; justify-content: space-between; gap: 5vw; }
@@ -256,7 +255,6 @@ a,button { -webkit-tap-highlight-color: transparent; }
   .skill-group { grid-template-columns: 1fr; gap: .75rem; }
   .service-copy { max-width: none; padding-left: 15vw; text-indent: 5vw; }
   .service-copy > span { font-size: 3vw; }
-  .about-info .reference-credit { font-size: 3.2vw; margin-top: -4vw; }
   .about-contact { font-size: 9.7vw; margin-top: 7vw; }
   .project-page { display: flex; flex-direction: column; gap: 20vw; padding: 5vw 4vw 7vw; }
   .project-info { position: relative; top: auto; min-height: 0; padding: 0; width: 100%; }
