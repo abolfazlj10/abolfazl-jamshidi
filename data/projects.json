@@ -226,7 +226,8 @@
       "Brand experience"
     ],
     "accent": "#aeafff",
-    "image": "/projects/worldbuilderzzz.jpg",
+    "image": "/projects/worldbuilderzzz.webp",
+    "imageAspectRatio": "2000 / 1500",
     "repo": null,
     "demo": "https://www.worldbuilderzzz.ir/",
     "status": "available"
@@ -243,7 +244,8 @@
       "Personal website"
     ],
     "accent": "#c8c5ff",
-    "image": "/projects/mehdi-arman.jpg",
+    "image": "/projects/mehdi-arman.webp",
+    "imageAspectRatio": "2000 / 1500",
     "repo": null,
     "demo": "https://www.imehdiarman.ir/",
     "status": "available"
@@ -286,15 +288,22 @@
       "Project showcase"
     ],
     "accent": "#ef9b90",
-    "image": "/projects/fash-ba-tashdid-mockup.png",
-    "imageAspectRatio": "1672 / 941",
+    "image": "/projects/fash-home.webp",
+    "imageAspectRatio": "2000 / 1500",
     "gallery": [
       {
-        "src": "/projects/fash-ba-tashdid.jpg",
-        "alt": "Fash Ba Tashdid homepage screenshot",
-        "width": 1280,
-        "height": 800,
-        "caption": "A closer look at the homepage."
+        "src": "/projects/fash-about.webp",
+        "alt": "Fash Ba Tashdid About section displayed on a tablet held in two hands",
+        "width": 2000,
+        "height": 1500,
+        "caption": "The About section introduces the collective."
+      },
+      {
+        "src": "/projects/fash-contact.webp",
+        "alt": "Fash Ba Tashdid Contact section displayed on a laptop against an orange grid",
+        "width": 2000,
+        "height": 1500,
+        "caption": "The Contact section brings the collective’s contact options together."
       }
     ],
     "repo": null,
