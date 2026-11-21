@@ -4,9 +4,9 @@
 
 ## صفحات
 
-- **صفحهٔ اصلی ← «Selected works»**: نام بزرگ با نمایش متناوب چهار تصویر، معرفی سه‌خطی، **«Approach»** و چهار پروژهٔ منتخبِ دارای تصویر.
-- بخش کارها: همهٔ هشت پروژه در دو ستون دسکتاپ و یک ستون موبایل.
-- **«Work» ← کارت پروژه**: توضیحات ثابت در سمت چپ و گالری در سمت راست؛ **«Visit website»**، **«Source code»** در صورت وجود، و **«Next project»**.
+- **Homepage → Selected projects**: all projects appear in a two-column desktop grid and a single column on mobile. The hero slideshow retains its curated images.
+- **Projects navigation**: jumps to the homepage project grid. The former `/work/` page redirects to `/#projects`.
+- **Project card → project page**: project details, cover and gallery, website and optional source links, and navigation to the next project.
 - **منوی بالا ← «About»**: عکس، معرفی، خدمات و اطلاعات تماس.
 - **نسخهٔ موبایل ← «Menu»**: منوی تمام‌صفحه، بسته‌شدن با **«Close»** یا Escape، و محدودشدن حرکت Tab به کنترل‌های منو.
 

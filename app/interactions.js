@@ -11,7 +11,7 @@ export function Header({ projectCount }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const toggleRef = useRef(null);
-  const links = [{ href: '/', label: 'Home' }, { href: '/work/', label: 'Work', count: projectCount }, { href: '/about/', label: 'About' }];
+  const links = [{ href: '/', label: 'Home' }, { href: '/#projects', label: 'Projects', count: projectCount }, { href: '/about/', label: 'About' }];
   const currentPath = pathname === '/' ? '/' : `${pathname.replace(/\/$/, '')}/`;
   const currentPage = (href) => currentPath === href ? 'page' : undefined;
 

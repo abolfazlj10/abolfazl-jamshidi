@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -8,15 +8,16 @@ const screenshots = process.env.TEST_SCREENSHOTS || '/tmp/j10-portfolio';
 const browser = await chromium.launch({ headless: true, channel: process.env.TEST_BROWSER_CHANNEL || 'chrome' });
 await mkdir(screenshots, { recursive: true });
 const errors = [];
+const projects = JSON.parse(await readFile(new URL('../data/projects.json', import.meta.url)));
 try {
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto(baseURL);
   await page.getByRole('button', { name: 'Pause project slideshow' }).click();
   assert.equal(await page.getByRole('button', { name: 'Play project slideshow' }).getAttribute('aria-pressed'), 'true');
-  await page.getByRole('link', { name: 'See all works', exact: true }).filter({ visible: true }).click();
-  await page.waitForURL('**/work/');
-  assert.equal(await page.locator('.project-card').count(), 8);
+  await page.getByRole('link', { name: 'Explore my work', exact: true }).click();
+  await page.waitForURL('**/#projects');
+  assert.equal(await page.locator('#projects .project-card').count(), projects.length);
   const routes = await page.locator('.project-card').evaluateAll((links) => links.map((link) => link.href));
   for (const route of routes) {
     await page.goto(route);
@@ -27,9 +28,12 @@ try {
     await next.click();
     await page.waitForURL(`**${target}`);
   }
+  await page.goto(`${baseURL}/work/`);
+  await page.waitForURL('**/#projects');
+  assert.equal(await page.locator('#projects .project-card').count(), projects.length);
   for (const width of [320, 390, 768, 1280, 1920]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const route of ['/', '/work/', '/about/', '/project/worldbuilderzzz/', '/project/avani/']) {
+    for (const route of ['/', '/about/', '/project/worldbuilderzzz/', '/project/avani/']) {
       await page.goto(`${baseURL}${route}`);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `no overflow: ${width} ${route}`);
     }
