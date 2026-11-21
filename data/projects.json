@@ -382,5 +382,52 @@
     "demo": "https://www.idiomyar.ir/",
     "status": "available",
     "imageAspectRatio": "1672 / 941"
+  },
+  {
+    "id": "luminars",
+    "title": "Luminars",
+    "summary": "An event website with brand access codes, capacity-controlled registration, and personalized invitations.",
+    "category": "EVENTS & EXPERIENCES",
+    "description": "An event website and registration platform for Luminars, bringing together art, fashion, music, and lifestyle. The experience combines event information and a scroll-driven gallery with brand-specific access codes, limited-capacity registration, downloadable personalized invitations, and admin and reporting tools.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Three.js",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "caseStudy": {
+      "title": "From discovering the event to receiving an invitation",
+      "intro": "Luminars combines a visual event experience with the registration tools needed by guests and organizers.",
+      "sections": [
+        {
+          "title": "The event experience",
+          "text": "The event page brings the story, participating brands, frequently asked questions, and a scroll-driven photo gallery together. A curved Three.js grid and red-and-black backgrounds carry the visual identity through the page."
+        },
+        {
+          "title": "Registration within each brand’s capacity",
+          "text": "Guests use a brand’s access code to register. Capacity checks run inside a database transaction with a row lock, so simultaneous requests cannot claim the same final seat. A returning mobile number retrieves its existing invitation without consuming another place."
+        },
+        {
+          "title": "Invitations and organizer tools",
+          "text": "Each registration receives a permanent invitation page and a downloadable PNG personalized with the guest’s name. Protected admin and reporting pages support brand capacities, access codes, registration review, and filtered Excel exports."
+        }
+      ],
+      "explore": "Open the live website to view its current entry experience. Completing registration requires a valid access code supplied by a participating brand."
+    },
+    "tags": [
+      "Event website",
+      "Registration",
+      "Personalized invitations"
+    ],
+    "accent": "#f36b45",
+    "image": "/projects/luminars-cover.webp",
+    "imageAspectRatio": "2000 / 1500",
+    "repo": null,
+    "demo": "https://luminars.ir/",
+    "status": "available"
   }
 ]
